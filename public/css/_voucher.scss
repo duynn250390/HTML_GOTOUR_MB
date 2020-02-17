@@ -1,0 +1,77 @@
+//TODO: VOUCHER Style
+.module_vocher {
+    border: 1px solid #E4E4E4;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.module_vocher01 {
+    .list_vou {
+        .item_vou {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            span.title {
+                font-size: px2em(14);
+                font-weight:normal;
+                display: inline-block;
+                min-width: 100px;
+                @include maxWidth(980px){
+                    min-width: 80px;
+                }
+            }
+            span.description {
+                font-size: px2em(18);
+                font-weight: 600;
+                @include maxWidth(980px){
+                    font-size: px2em(16);
+                }
+            }
+        }
+    }
+}
+.module_vocher02{
+    .list_ouc {
+        .item_ouc {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            font-size: px2em(14);
+            &:last-child{
+                margin-bottom: 0;
+            }
+            span.title {
+                font-weight:normal;
+                display: inline-block;
+                min-width: 100px;
+                @include maxWidth(980px){
+                    min-width: 80px;
+                }
+            }
+            span.description {
+                color:#8D8D8D;
+            }
+        }
+    }
+}
+.module_vocher03 {
+    color:#4B4B4B;
+    margin-bottom: 3em;
+    a{
+        display: block;
+        color:#4B4B4B;
+        text-decoration: none;
+        outline: none;
+        margin-bottom: 1em;
+        @include tran_slow_03();
+        @include hofo(){
+            color:$colMain;
+        }
+    }
+    p{
+        color:#4B4B4B;
+    }
+}

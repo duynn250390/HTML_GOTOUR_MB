@@ -1,0 +1,73 @@
+@media screen and (max-width: 1024px) {
+    .main_header {
+        .box_navbar_main {
+            .box_search_in_header {
+                img {
+                    width: 30px;
+                }
+            }
+
+            .box_brand {
+                
+            }
+
+            // .bullet_menu {
+            //     &::after {
+            //         width: 42px;
+            //         height: 40px;
+            //     }
+            // }
+            .collapse_navbar {
+                .navbar_main {
+                    .item_menu {
+                        a {
+                            // @include fontSizeA();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main_header {
+
+        .box_navbar_main {
+            justify-content: space-between;
+
+            .collapse_navbar {
+                display: none;
+            }
+
+            .bullet_menu {
+                display: flex;
+            }
+        }
+    }
+
+    .main_content.contente {
+        .list_item_box_news {
+            .item_news {
+                width: 100%;
+
+                .main_box_new {
+                    // flex-grow: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .main_content {
+        .main_box_slide {
+            // padding-top: 1em;
+        }
+    }
+   
+}
+
+@media screen and (max-width: 480px) {}

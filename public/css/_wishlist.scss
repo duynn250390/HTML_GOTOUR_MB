@@ -1,0 +1,80 @@
+//TODO: WISHLIST Style
+.list_result_search {
+    &.wishlist {
+        .item_review {
+            .cart_icon {
+                height: 40px;
+                width: 40px;
+                cursor: pointer;
+                border: 1px solid #8D8D8D;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include tran_slow_03();
+
+                @include maxWidth(980px) {
+                    height: 32px;
+                    width: 32px;
+                }
+
+                &:after {
+                    content: '';
+                    height: 24px;
+                    width: 24px;
+                    background-image: url(../images/icon/icon_cart.png);
+                    display: block;
+                    background-position: center;
+                    background-size: 100%;
+                    @include tran_slow_03();
+
+                    @include maxWidth(980px) {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+
+                @include hofo() {
+                    border: 1px solid #F7444E;
+
+                    &:after {
+                        background-image: url(../images/icon/icon_cartH.png);
+                    }
+                }
+            }
+
+            .box_destion_review {
+                .heading_title {
+                    font-size: px2em(16);
+                }
+            }
+
+            .box_cart {
+                @include maxWidth(420px) {
+                    margin-top: 1em;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.price_wislist {
+    font-size: px2em(20);
+    color: $colMain;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.title_search_box {
+    display: block;
+    text-align: center;
+    font-size: px2em(24);
+    margin-bottom: 1em;
+
+    .key001,
+    .key002 {
+        font-weight: 600;
+    }
+}
