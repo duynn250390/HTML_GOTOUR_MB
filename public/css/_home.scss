@@ -261,8 +261,6 @@
     }
 }
 
-.content_main_father {}
-
 .main_header {
     position: fixed;
     left: 0;
@@ -433,12 +431,7 @@
 }
 
 .main_content.respoMenu {
-    padding-top: 140px;
-
-    @include maxWidth(768px) {
-        padding-top: 110px;
-    }
-
+    // padding-top: 140px;
 }
 
 .main_box_slide {
@@ -740,6 +733,7 @@
                         padding: 3px 5px;
                         font-size: px2em(12);
                     }
+
                     @include maxWidth(375px) {
                         font-size: px2em(10);
                     }
@@ -3974,6 +3968,116 @@
         }
     }
 }
-.content_main_father{
-    min-width: 1120px;
+
+.mb_dev {
+    &.main_headers {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 999;
+
+        .global_header {
+            position: relative;
+            min-height: 56px;
+            background-color: #fff;
+
+            .main_logo {
+                margin: 0 52px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 56px;
+
+                a {
+                    text-decoration: none;
+                    outline: none;
+                    display: inline-block;
+
+                    .logo {
+                        width: 106px;
+                        height: 36px;
+                        background: url('../images/icon/go!tour.png');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 90%;
+                    }
+                }
+            }
+
+            .menu_slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 52px;
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    background: url('../images/icon/icon_menu_show.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 90%;
+                    display: block;
+                }
+            }
+
+            .search_slide {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 52px;
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    background: url('../images/icon/search_icon_q.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 90%;
+                    display: block;
+                }
+            }
+        }
+
+
+    }
+
+    &.vs_mb {
+        margin-top: 56px;
+
+        .contenta {
+            margin-top: 20px;
+        }
+    }
+
+    &.main_footer {
+        max-width: 480px;
+        margin: 0 auto;
+ 
+
+        .footer_top {
+            padding: 1em 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.hideText {
+    line-height: 0 !important;
+    font-size: 0 !important;
+    text-indent: -9999px;
+    overflow: hidden;
 }

@@ -96,7 +96,7 @@
         }
 
         .swiper-container {
-            display: none;
+            // display: none;
 
             @include maxWidth(414px) {
                 display: block;
@@ -2297,11 +2297,6 @@
         justify-content: center;
     }
 }
-
-.ed_bar_top .main_content.respoMenu {
-    padding-top: 100px;
-}
-
 .box__top_info {
     .sum__info {
         .info_day {
