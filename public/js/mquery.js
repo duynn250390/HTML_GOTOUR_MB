@@ -120,7 +120,7 @@ $(document).ready(function () {
     //         }
     //     ]
     // });
-   
+
     $('#main_box_slide').slick({
         infinite: true,
         slidesToShow: 6,
@@ -552,19 +552,6 @@ function tabs_CONTROL_NOW($value) {
         $('#' + DATAID + get_ID).show(300);
     });
 }
-
-{/* <div class="control_heading_tabs">
-    <div class="item_head_tabs active" data-tabs="01">상세정보</div>
-    <div class="item_head_tabs" data-tabs="02">취소안내</div>
-</div>
-    <div class="control_body_tabs">
-        <div class="body_tabs_item active" data-id="tabs_" id="tabs_01">
-           CONTENT
-        </div>
-        <div class="body_tabs_item" data-id="tabs_" id="tabs_02">
-            CONTENT
-        </div>
-    </div> */}
 function ShowAnser() {
     var sum_question = $('.sum_question');
     $(document).on('click', '.sum_question', function () {
@@ -634,4 +621,47 @@ $(document).scroll(function () {
             'overflow': 'visible'
         });
     }
+});
+// -----------------SHOW MENU-----------------
+$(document).on('click', '#menu_slide', function (e) {
+    $('body').addClass('active_menu');
+    $('.menu_mb').css({
+        'left': 0,
+    });
+    $("body").append("<div class='ovelay_menu' id='ovelay_menu'></div>");
+});
+$(document).on('click', '#ovelay_menu', function (e) {
+    $('.menu_mb').css({
+        'left': '-100%',
+    });
+    $('body').removeClass('active_menu');
+    $(this).remove();
+});
+
+
+// -----------------SHOW SEARCH-----------------
+$(document).on('click', '#search_action', function (e) {
+    $('body').addClass('active_menu');
+    $(this).hide();
+    $('.search_box').css({
+        'top': '56px',
+    });
+    $("body").append("<div class='ovelay_search' id='ovelay_search'></div>");
+});
+$(document).on('click', '#ovelay_search', function (e) {
+    $('body').removeClass('active_menu');
+    $('.search_box').css({
+        'top': '-100%',
+    });
+    $('#search_action').show();
+    $(this).remove();
+});
+
+// ===================TABS RANKING=================
+$(document).on('click', '.item', function (e) {
+    $('.control_tabs_ranking .item').removeClass('on');
+    $('.list__rank').removeClass('on');
+    $(this).addClass('on');
+    var data_rank = $(this).attr('data-rank');
+    $('#ranking_00'+ data_rank).addClass('on');
 });

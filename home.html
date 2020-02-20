@@ -27,10 +27,81 @@
                     <div class="logo hideText">Logo</div>
                 </a>
             </div>
-            <div class="menu_slide hideText">Menu</div>
-            <div class="search_slide hideText">검색열기</div>
+            <div class="control_menu_back">
+                <div class="menu_slide show_menu hideText" id="menu_slide">Menu</div>
+            </div>
+            <div class="search_slide hideText" id="search_action">검색열기</div>
         </div>
     </header>
+    <aside class="menu_mb">
+        <div class="mn_top">
+            <a href="" class="icon_home hideText">Home</a>
+            <a href="" class="icon_seting hideText">Seting</a>
+            <div class="acount">
+                <div class="thumb">
+                    <a href="">
+                        <span class="img_acount" style="background-image: none;"></span>
+                    </a>
+                </div>
+                <div class="info_acount">
+                    <div class="n1">로그인을 해주세요</div>
+                    <div class="n2">예매확인</div>
+                </div>
+            </div>
+        </div>
+        <div class="mn_body">
+            <nav class="main_menu">
+                <ul class="menu">
+                    <li class="menu_list on"><a href="" class="menu_item">KPOP/콘서트</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">공연/뮤지컬</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">전시/행사</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">현지투어/체험</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">팬미팅/이벤트</a></li>
+                </ul>
+                <ul class="menu">
+                    <li class="menu_list"><a href="" class="menu_item">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <aside class="search_box">
+        <div class="main_search">
+            <div class="group_search">
+                <div class="main_input">
+                    <input type="text" placeholder="Search..." class="control_input">
+                    <button class="btn_search hideText">dsd</button>
+                </div>
+            </div>
+            <div class="auto_tag_complate">
+                <ul class="sum_tags_search">
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
         <section class="main_content contenta respoMenu">
             <div class="swiper-container top_swiper_index">
@@ -520,8 +591,233 @@
                 <div class="box___more_item"><a href="">상품 더보기</a></div>
             </div>
         </section>
-        <section class="main_content postter news ranks">
-            <ul class="list__rank">
+        <section class="advs_content">
+            <a href="" class="full_banner">
+                <img src="public/images/hot_news/adv1.jpg">
+            </a>
+        </section>
+        <section class="main_content news ranks">
+            <div class="heading_ranking">
+                <h1 class="title">랭킹</h1>
+            </div>
+            <ul class="control_tabs_ranking">
+                <li class="item on" data-rank="1">행사 제목 </li>
+                <li class="item" data-rank="2">행사 기간</li>
+                <li class="item" data-rank="3">행사 장소</li>
+                <li class="item" data-rank="4">행사 순위</li>
+            </ul>
+            <div class="action_filter">
+                <div class="box_control_filter">
+                    <div class="group_fiter calen_drop">
+                        <input type="text" class="control_input" placeholder="2020년 9일 2월">
+                        <span class="span_icon"></span>
+                    </div>
+                    <div class="group_fiter">
+                        <input type="text" class="control_input" placeholder="날짜 입력...">
+                        <button type="submit" class="control_button">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="list__rank on" id="ranking_001">
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank up">1</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide01.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide02.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide03.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide02.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list__rank" id="ranking_002">
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank up">1</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide01.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide02.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide03.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide02.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list__rank" id="ranking_003">
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank up">1</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide01.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide02.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide03.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list__rank_item">
+                    <a href="" class="list__rank_item_wrap">
+                        <div class="list__rank_item_no">
+                            <span>1</span>
+                        </div>
+                        <div class="list__rank_item_rank down">2</div>
+                        <div class="list__rank_item_thumb">
+                            <img src="public/images/share/item_slide02.png" alt="">
+                        </div>
+                        <div class="list__rank_item_contents">
+                            <div class="title_heading_news">현지투어 / 체험</div>
+                            <div class="time">09:00~21:00</div>
+                            <div class="description">더케이호텔엔리조트</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list__rank" id="ranking_004">
                 <li class="list__rank_item">
                     <a href="" class="list__rank_item_wrap">
                         <div class="list__rank_item_no">
@@ -592,7 +888,87 @@
             </div>
         </section>
         <section class="main_content postter news___list">
-            <div class="title_heading news_left">한류정보</div>
+            <div class="title_heading">리뷰</div>
+            <ul class="list___news">
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__thumb">
+                            <img src="public/images/hot_news/thumbs_a.png" alt="">
+                        </div>
+                        <div class="list_news__content">
+                            <div class="title">젊은이의 거리 홍대 도보 여행 </div>
+                            <ul class="star_review">
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li></li>
+                            </ul>
+                            <div class="descriptions">거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__thumb">
+                            <img src="public/images/hot_news/thumbs_b.png" alt="">
+                        </div>
+                        <div class="list_news__content">
+                            <div class="title">젊은이의 거리 홍대 도보 여행 </div>
+                            <ul class="star_review">
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li></li>
+                            </ul>
+                            <div class="descriptions">거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__thumb">
+                            <img src="public/images/hot_news/thumbs_c.png" alt="">
+                        </div>
+                        <div class="list_news__content">
+                            <div class="title">젊은이의 거리 홍대 도보 여행 </div>
+                            <ul class="star_review">
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li></li>
+                            </ul>
+                            <div class="descriptions">거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__thumb">
+                            <img src="public/images/hot_news/thumbs_d.png" alt="">
+                        </div>
+                        <div class="list_news__content">
+                            <div class="title">젊은이의 거리 홍대 도보 여행 </div>
+                            <ul class="star_review">
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li>
+                                <li></li>
+                            </ul>
+                            <div class="descriptions">거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="box___more">
+                <div class="box___more_item"><a href="">상품 더보기</a></div>
+            </div>
+        </section>
+        <section class="main_content postter news___list list_edial">
+            <div class="title_heading">한류정보</div>
             <ul class="list___news">
                 <li class="list_news_item">
                     <a href="" class="list___news_warap">
@@ -601,8 +977,7 @@
                         </div>
                         <div class="list_news__content">
                             <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
                         </div>
                     </a>
                 </li>
@@ -613,20 +988,15 @@
                         </div>
                         <div class="list_news__content">
                             <div class="title hot">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
                         </div>
                     </a>
                 </li>
                 <li class="list_news_item">
                     <a href="" class="list___news_warap">
-                        <div class="list_news__thumb">
-                            <img src="public/images/hot_news/thumbs_c.png" alt="">
-                        </div>
                         <div class="list_news__content">
                             <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
                         </div>
                     </a>
                 </li>
@@ -637,52 +1007,18 @@
                         </div>
                         <div class="list_news__content">
                             <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
                         </div>
                     </a>
                 </li>
             </ul>
+            <div class="box___more">
+                <div class="box___more_item"><a href="">상품 더보기</a></div>
+            </div>
         </section>
-        <section class="main_content postter news___list">
-            <div class="title_heading news_left">공지사항</div>
+        <section class="main_content postter news___list list_edial">
+            <div class="title_heading">공지사항</div>
             <ul class="list___news">
-                <li class="list_news_item">
-                    <a href="" class="list___news_warap">
-                        <div class="list_news__thumb">
-                            <img src="public/images/hot_news/thumbs_e.png" alt="">
-                        </div>
-                        <div class="list_news__content">
-                            <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="list_news_item">
-                    <a href="" class="list___news_warap">
-                        <div class="list_news__thumb">
-                            <img src="public/images/hot_news/thumbs_f.png" alt="">
-                        </div>
-                        <div class="list_news__content">
-                            <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="list_news_item">
-                    <a href="" class="list___news_warap">
-                        <div class="list_news__thumb">
-                            <img src="public/images/hot_news/thumbs_g.png" alt="">
-                        </div>
-                        <div class="list_news__content">
-                            <div class="title hot">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
-                        </div>
-                    </a>
-                </li>
                 <li class="list_news_item">
                     <a href="" class="list___news_warap">
                         <div class="list_news__thumb">
@@ -690,12 +1026,44 @@
                         </div>
                         <div class="list_news__content">
                             <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
-                            <div class="descriptions">젊은이의 거리 홍대 도보 여행</div>
-                            <div class="date"> 09:00~21:00</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__thumb">
+                            <img src="public/images/hot_news/thumbs_b.png" alt="item news ">
+                        </div>
+                        <div class="list_news__content">
+                            <div class="title hot">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__content">
+                            <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list_news_item">
+                    <a href="" class="list___news_warap">
+                        <div class="list_news__thumb">
+                            <img src="public/images/hot_news/thumbs_d.png" alt="">
+                        </div>
+                        <div class="list_news__content">
+                            <div class="title">젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
+                            <div class="descriptions"> 홍대 젊은이의 거리 홍대 도보 여행 젊은이의 거리 홍대 도보 여행 홍대 도보 여행 도보 여행</div>
                         </div>
                     </a>
                 </li>
             </ul>
+            <div class="box___more">
+                <div class="box___more_item"><a href="">상품 더보기</a></div>
+            </div>
         </section>
     </aside>
     <footer class="mb_dev main_footer">

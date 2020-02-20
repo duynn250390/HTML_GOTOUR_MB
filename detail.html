@@ -21,123 +21,89 @@
 </head>
 
 <body onload="loaded()">
-    <header class="main_header ed_bar_top">
-        <div class="top_bar ">
-            <div class="container_dis">
-                <div class="level">
-                    <ul class="heaer_menu_drop">
-                        <li class="li_meu">
-                            <div class="aput_dorop">
-                                Language
-                                <ul class="drop_down_menu drop_lang">
-                                    <li>KOR</li>
-                                    <li>ENG</li>
-                                    <li>VI</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="li_meu">
-                            <ul class="no_login">
-                                <li class="login"><a href="">Login</a></li>
-                                <li class="sign"><a href="">SignUp</a></li>
-                            </ul>
-                            <!-- <div class="aput_dorop ">
-                                Primarynet
-                                <span class="thumb"><img src="public/images/share/1.jpg" /></span>
-                                <ul class="drop_down_menu drop_lang">
-                                    <li>KOR</li>
-                                    <li>ENG</li>
-                                    <li class="log_out"><a href="">Logout</a></li>
-                                </ul>
-                            </div> -->
-                        </li>
-                    </ul>
+    <header class="mb_dev main_headers">
+        <div class="global_header">
+            <div class="main_logo">
+                <span class="txt_menu">제목 상세 카테고리</span>
+            </div>
+            <div class="control_menu_back">
+                <div class="go_back hideText" id="go_back">Back</div>
+                <div class="menu_slide show_menu hideText" id="menu_slide">Menu</div>
+            </div>
+            <div class="search_slide hideText" id="search_action">검색열기</div>
+        </div>
+    </header>
+    <aside class="menu_mb">
+        <div class="mn_top">
+            <a href="" class="icon_home hideText">Home</a>
+            <a href="" class="icon_seting hideText">Seting</a>
+            <div class="acount">
+                <div class="thumb">
+                    <a href="">
+                        <span class="img_acount" style="background-image: none;"></span>
+                    </a>
+                </div>
+                <div class="info_acount">
+                    <div class="n1">로그인을 해주세요</div>
+                    <div class="n2">예매확인</div>
                 </div>
             </div>
         </div>
-        <div class="container_dis">
-            <div class="box_navbar_main">
-                <div class="box_menu_respontive_ovelay" id="box_menu_respontive_ovelay"></div>
-                <div class="box_menu_respontive" id="box_menu_respontive">
-                    <div class="header_menu_repo">
-                        <div class="info_header">
-                            <figure class="main_thumb">
-                                <img src="public/images/share/avata_member.png" alt="avataMem">
-                            </figure>
-                            <div class="information_mem">
-                                <h4 class="name_mem">홍길동 님</h4>
-                                <ul class="control_mem">
-                                    <li><a href="">예매확인</a></li>
-                                    <li><a href="">위시리스트</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <span class="control_close" id="control_close"></span>
-                    </div>
-                    <div class="box_menu_HTML" id="box_menu_HTML"></div>
-                </div>
-                <div class="control_respon_left">
-                    <div class="bullet_menu" id="bullet_menu"></div>
-                </div>
-                <div class="box_brand">
-                    <a href="" class="stlogo"></a>
-                </div>
-                <div class="collapse_navbar" id="collapse_navbar">
-                    <ul class="navbar_main">
-                        <li class="item_menu "><a href="">공연티켓</a></li>
-                        <li class="item_menu active_menu"><a href="">K-POP</a></li>
-                        <li class="item_menu"><a href="">전시/행사</a></li>
-                        <li class="item_menu"><a href="">이벤트</a></li>
-                        <li class="item_menu"><a href="">현지투어</a></li>
-                        <li class="item_menu "><a href="">리뷰</a></li>
-                        <li class="item_menu"><a href="">한국여행 </a></li>
-                        <li class="item_menu"><a href="">한류정보</a></li>
-                        <li class="item_menu"><a href="">공연장안내</a></li>
-                        <li class="item_menu"><a href="">고객센터</a></li>
-                    </ul>
-                </div>
-                <div class="box_search_in_header show_box_search " id="box_search_in_header">
-                    <img src="public/images/icon/icon_search_top.png">
+        <div class="mn_body">
+            <nav class="main_menu">
+                <ul class="menu">
+                    <li class="menu_list on"><a href="" class="menu_item">KPOP/콘서트</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">공연/뮤지컬</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">전시/행사</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">현지투어/체험</a></li>
+                    <li class="menu_list"><a href="" class="menu_item">팬미팅/이벤트</a></li>
+                </ul>
+                <ul class="menu">
+                    <li class="menu_list"><a href="" class="menu_item">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <aside class="search_box">
+        <div class="main_search">
+            <div class="group_search">
+                <div class="main_input">
+                    <input type="text" placeholder="Search..." class="control_input">
+                    <button class="btn_search hideText">dsd</button>
                 </div>
             </div>
-        </div>
-        <div class="box_search animated" id="box_search">
-            <div class="container_dis">
-                <div class="form_box_search">
-                    <!-- <div class="form_control_search"> -->
-                    <form method="GET" class="form_control_search">
-                        <div class="input_box">
-                            <input type="text" class="control_input" name="keySearch" id="control_input" />
-                            <span class="clear_text" id="clear_text"></span>
-                        </div>
-                        <div class="name_action_box">
-                            <button class="action_search">Search</button>
-                        </div>
-                    </form>
-                    <!-- </div> -->
-                    <div class="for_auto_suggestion">
-                        <div class="title_auto">인기 검색어</div>
-                        <ul class="list_key">
-                            <li><a href="">박보검</a></li>
-                            <li><a href="">TWICE</a></li>
-                            <li><a href="">BTS</a></li>
-                            <li><a href="">박보검</a></li>
-                            <li><a href="">홍길동</a></li>
-                            <li><a href="">서울공연</a></li>
-                            <li><a href="">검색어</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="auto_tag_complate">
+                <ul class="sum_tags_search">
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header><!-- main_header -->
-    <aside class="content_main_father ed_bar_top" id="content_main_father">
+    </aside>
+    <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
         <section class="main_content respoMenu main_content___detail">
-            <!-- <ul class="list__tabs">
-                <li class="active">공연</li>
-                <li>공연</li>
-                <li>공연</li>
-            </ul> -->
             <div class="box__top_detail">
                 <div class="ovelay_bg">
                     <img src="./public/images/hot_news/thumb_news_top_e.png" alt="롤링 25주년 기념 공연 vol．" />
@@ -147,8 +113,7 @@
                         <div class="text_top">평가<span>8.5</span></div>
                         <div class="ticked_artor">티켓캐스트</div>
                     </div>
-                    <div class="detail__info_center"
-                        style="background-image: url(./public/images/hot_news/oz1.png);">
+                    <div class="detail__info_center" style="background-image: url(./public/images/hot_news/oz1.png);">
                     </div>
                     <div class="detail__info_right">
                         <div class="text_top">

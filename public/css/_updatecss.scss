@@ -246,7 +246,7 @@
             height: 31px;
             margin-bottom: 22px;
             color: #3F65AE;
-            font-size: 22px;
+            font-size: px2em(22);
             font-weight: 300;
             line-height: 31px;
             text-align: center;
@@ -333,6 +333,7 @@
                             }
 
                             .poster_heading {
+                                margin-top: 0.5em;
                                 @include break_word(2, 22);
                                 color: #565656;
                                 font-size: 16px;
@@ -426,13 +427,6 @@
                         width: calc(100% - 130px);
                         padding-top: 2px;
                         padding-left: 16px;
-
-                        @include maxWidth(375px) {
-                            width: calc(100% - 90px);
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                        }
 
                         .title {
                             font-size: px2em(18);
@@ -604,11 +598,11 @@
             }
 
             .title_heading {
-                justify-content: left;
+                // justify-content: left;
 
-                &::before {
-                    content: none;
-                }
+                // &::before {
+                //     content: none;
+                // }
             }
 
             .list___news {
@@ -637,8 +631,8 @@
 
                         .list_news__thumb {
                             float: left;
-                            width: 77px;
-                            height: 100px;
+                            width: 100px;
+                            height: 77px;
 
                             img {
                                 width: inherit;
@@ -650,11 +644,11 @@
 
                         .list_news__content {
                             float: left;
-                            width: calc(100% - 77px);
+                            width: calc(100% - 100px);
                             padding-left: 10px;
 
                             .title {
-                                font-size: px2em(17);
+                                font-size: px2em(15);
                                 color: #1A1A1B;
                                 @include break_word(3, 22);
 
@@ -666,7 +660,7 @@
                             .descriptions {
                                 font-size: px2em(14);
                                 color: #8D8D8D;
-                                margin-top: 18px;
+                                margin-top: 0.5em;
                                 margin-bottom: 2px;
 
                             }
@@ -837,7 +831,7 @@
                 }
 
                 .detail__info_center {
-                    width: 40%;
+                    width: 198px;
                     height: 250px;
                     background-position: center;
                     position: relative;
@@ -918,14 +912,14 @@
                 justify-content: center;
 
                 .top_title {
-                    font-size: px2em(30);
+                    font-size: px2em(20);
                     color: #3F65AE;
                     @include break_word(1, 33);
                     margin-bottom: 5px;
                 }
 
                 .bot_title {
-                    font-size: px2em(22);
+                    font-size: px2em(16);
                     color: #4B4B4B;
                     @include break_word(1, 26);
                 }
@@ -937,11 +931,11 @@
                     }
 
                     .fromdate {
-                        font-size: px2em(16);
+                        font-size: px2em(12);
                     }
 
                     .todate {
-                        font-size: px2em(16);
+                        font-size: px2em(12);
                     }
                 }
             }
@@ -956,6 +950,8 @@
     text-decoration: none;
     outline: none;
     cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
 
     .box___more_item {
 
@@ -963,6 +959,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        position: relative;
 
         a {
             text-decoration: none;
@@ -973,7 +970,7 @@
 
         &:after {
             position: absolute;
-            right: 15px;
+            right: 5px;
             content: '';
             width: 28px;
             height: 7px;
@@ -1149,11 +1146,58 @@
                 font-size: px2em(16);
                 cursor: pointer;
                 @include tran_slow_03();
+                position: relative;
 
                 &.active {
                     @include borderRadius(20px);
-                    @include gradianAA();
-                    color: #fff;
+                    // @include gradianAA();
+                    color: #3F65AE;
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background: #F7444E;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .dox_fillter {
+            margin-top: 1.5em;
+
+            &::after {
+                @include clear_fix();
+            }
+
+            ul {
+                float: right;
+
+                li {
+                    float: left;
+                    position: relative;
+                    padding: 0 15px;
+                    list-style: none;
+                    cursor: pointer;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 1px;
+                        background: #8D8D8D;
+                        right: 0;
+                        top: 0;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: none;
+                        }
+                    }
                 }
             }
         }
@@ -1537,6 +1581,7 @@
         text-size-adjust: none;
 
         .list_detail {
+            width: 100%;
             position: absolute;
             height: 40px;
             white-space: nowrap;
@@ -1544,6 +1589,8 @@
             top: 6px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            overflow-x: auto;
 
             .item_list {
                 height: 40px;
@@ -1554,7 +1601,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                font-size: px2em(20);
+                font-size: px2em(18);
                 line-height: 19px;
                 color: #8D8D8D;
                 cursor: pointer;
@@ -1573,17 +1620,17 @@
     margin-top: 15px;
 
     .heading_top {
-        font-size: px2em(22);
-        columns: #4B4B4B;
+        font-size: px2em(14);
+        color: #707070;
         font-weight: 600;
-        line-height: 28px;
+        line-height: 20px;
         text-align: center;
     }
 
     .heading_bot {
         margin-top: 5px;
-        font-size: px2em(16);
-        columns: #4B4B4B;
+        font-size: px2em(14);
+        color: #707070;
         line-height: 21px;
         text-align: center;
     }
@@ -1875,7 +1922,7 @@
 
     .heading_title {
         color: #1a1a1b;
-        font-size: px2em(20);
+        font-size: px2em(18);
         margin-bottom: 0.5em;
         position: relative;
 
@@ -1897,6 +1944,8 @@
                 border-radius: 12px;
                 font-size: 13px;
                 line-height: 25px;
+                min-width: 100px;
+                text-align: center;
                 color: #3F65AE;
                 text-decoration: none;
                 outline: none;
@@ -1906,7 +1955,7 @@
 
     .tit_detail_sub {
         color: #8D8D8D;
-        font-size: px2em(18);
+        font-size: px2em(14);
     }
 
     .list_seat {
@@ -2274,12 +2323,12 @@
             width: 19px;
             display: inline-block;
             overflow: hidden;
-            background: url(../images/icon/sao.png);
+            background: url(../images/icon/icon_b.svg);
             background-size: 100%;
             background-repeat: no-repeat;
 
             &.on {
-                background: url(../images/icon/saoon.png);
+                background: url(../images/icon/icon_a.svg);
             }
         }
     }
@@ -2297,6 +2346,7 @@
         justify-content: center;
     }
 }
+
 .box__top_info {
     .sum__info {
         .info_day {
