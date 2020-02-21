@@ -551,13 +551,10 @@
     font-size: px2em(18);
     font-weight: 600;
     margin-bottom: 1em;
+    padding: 1em 10px;
     color: $col02;
     @include tran_slow_03();
     display: block;
-
-    @include maxWidth(1024px) {
-        display: none;
-    }
 
     a {
         text-decoration: none;

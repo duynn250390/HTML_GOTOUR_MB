@@ -85,6 +85,13 @@
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
+@mixin tran_slow_value($value) {
+    -webkit-transition:$value 0.3s ease-out;
+    -o-transition:$value 0.3s ease-out;
+    transition: $value 0.3s ease-out;
+    -moz-transition:$value 0.3s ease-out;
+    -ms-transition:$value 0.3s ease-out;
+}
 
 @mixin tran_slow_05 {
     -webkit-transition: all 0.5s ease-in-out 0s;

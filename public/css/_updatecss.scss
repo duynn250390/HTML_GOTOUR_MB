@@ -2389,8 +2389,8 @@
     @include maxWidth(480px) {
         overflow-y: scroll;
 
-        .items_links {
-            min-width: 1000px;
-        }
+        // .items_links {
+        //     min-width: 1000px;
+        // }
     }
 }

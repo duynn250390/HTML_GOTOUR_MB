@@ -665,3 +665,16 @@ $(document).on('click', '.item', function (e) {
     var data_rank = $(this).attr('data-rank');
     $('#ranking_00'+ data_rank).addClass('on');
 });
+// ===================TABS CONTACT=================
+$(document).on('click', '.item_tabs_Control', function (e) {
+    $('.item_tabs_Control').removeClass('on');
+    $('.tabs_control').removeClass('on');
+    $(this).addClass('on');
+    var data_form = $(this).attr('data-form');
+    $('#tabs_controll_00'+ data_form).addClass('on');
+});
+// ===================TABS CONTACT QA=================
+$(document).on('click', '.item_QA ', function (e) {
+    $('.item_QA ').removeClass('on');
+    $(this).addClass('on');
+});

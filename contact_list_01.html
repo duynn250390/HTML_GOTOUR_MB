@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Site Maps Link Page</title>
+    <title>문의하기</title>
 
     <!-- MyStyle CSS -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
@@ -16,17 +16,17 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+    <!-- require js loading -->
 </head>
 
 <body>
     <header class="mb_dev main_headers">
         <div class="global_header">
             <div class="main_logo">
-                <a href="">
-                    <div class="logo hideText">Logo</div>
-                </a>
+                <span class="txt_menu">문의하기</span>
             </div>
             <div class="control_menu_back">
+                <div class="go_back hideText" id="go_back">Back</div>
                 <div class="menu_slide show_menu hideText" id="menu_slide">Menu</div>
             </div>
             <div class="search_slide hideText" id="search_action">검색열기</div>
@@ -102,117 +102,107 @@
         </div>
     </aside>
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
-        <section class="main_content reservation_paymment respoMenu">
-            <div class="heading_main_title">
-                <a href="">Site Maps Links</a>
+        <div class="control_tabs_contact">
+            <ul class="tabs">
+                <li class="item_tabs_Control on" data-form="1">상세정보</li>
+                <li class="item_tabs_Control" data-form="2">취소안내</li data-form="2">
+            </ul>
+        </div>
+        <section class="form_sinup tabs_control on" id="tabs_controll_001">
+            <div class="group_box ">
+                <label class="label">제목</label>
+                <div class="form_row">
+                    <div class="box_form full">
+                        <input type="text" class="control_full" placeholder="">
+                    </div>
+                </div>
             </div>
-            <div class="grid_class">
-                <div class="items_links">
-                    <div class="left_box">Name Page</div>
-                    <div class="right_box">View</div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Home Page</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/home.html">Click</a>
+            <div class="group_box on_inline">
+                <label class="label">아이디</label>
+                <div class="form_row">
+                    <div class="box_form w_a">
+                        <label>MUSTB 첫번째 콘서트</label>
                     </div>
                 </div>
-                <div class="items_links">
-                    <div class="left_box">Signup Page</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/sinup.html">Click</a>
+            </div>
+            <div class="group_box">
+                <label class="label">휴대폰</label>
+                <div class="form_row">
+                    <div class="box_form w_33">
+                        <input type="text" class="control_full" placeholder="">
+                    </div>
+                    <div class="box_form w_33">
+                        <input type="text" class="control_full" placeholder="">
+                    </div>
+                    <div class="box_form w_33">
+                        <input type="text" class="control_full" placeholder="">
                     </div>
                 </div>
-                <div class="items_links">
-                    <div class="left_box">Detail Page</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/detail.html">Click</a>
+            </div>
+            <div class="group_box ">
+                <label class="label">제목</label>
+                <div class="form_row">
+                    <div class="box_form full">
+                        <input type="text" class="control_full" placeholder="">
                     </div>
                 </div>
-                <div class="items_links">
-                    <div class="left_box">List Item Category</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/list_item_category.html">Click</a>
+            </div>
+            <div class="group_box on_inline">
+                <label class="label">상품</label>
+                <div class="form_row">
+                    <div class="box_form w_a">
+                        <label>뮤지컬<엑스칼리버></label>
                     </div>
                 </div>
-                <div class="items_links">
-                    <div class="left_box">Contat List 01</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/contact_list_01.html">Click</a>
+            </div>
+            <div class="group_box ">
+                <label class="label">내용</label>
+                <div class="form_row">
+                    <div class="box_form full">
+                        <textarea name="" id="" rows="6"></textarea>
                     </div>
                 </div>
-                <div class="items_links">
-                    <div class="left_box">Contat List Detail QA</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/contact_form_detail_list.html">Click</a>
-                    </div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Cancel Request</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/cancel_request.html">Click</a>
-                    </div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Find Password</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/find_password.html">Click</a>
-                    </div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Reset Password</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/reset_password.html">Click</a>
-                    </div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Wish List</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/wishlist.html">Click</a>
-                    </div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Paymment</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/payment.html">Click</a>
-                    </div>
-                </div>
-                <div class="items_links">
-                    <div class="left_box">Paymment 2nd</div>
-                    <div class="right_box">
-                        <a target="_blank" href="/payment02.html">Click</a>
-                    </div>
-                </div>
+            </div>
+            <div class="form_send">
+                <button class="btn_send">Send</button>
             </div>
         </section>
+        <section class="form_sinup tabs_control" id="tabs_controll_002">Sss2</section>
     </aside>
-    <footer class="main_footer">
-        <div class="container_dis">
-            <div class="footer_top">
-                <div class="info_box_footer">
-                    <ul class="menu_footer">
-                        <li><a href="">정보 처리 방침</a></li>
-                        <li><a href="">회사소개</a></li>
-                        <li><a href="">이용약관</a></li>
-                    </ul>
-                    <ul class="info_bot">
-                        <li>100-864 서울시 중구 태평로2가 69-15 덕제빌딩 502 호</li>
-                        <li>Tel: 02-777-0442</li>
-                        <li>Fax: 02-777-0443</li>
-                        <li>E-mail: gotour777@hotmail.com</li>
-                    </ul>
-                </div>
-                <div class="box_social">
-                    <ul>
-                        <li class="fb"><a href="">facebook</a></li>
-                        <li class="tw"><a href="">twicter</a></li>
-                        <li class="bulet"><a href="">bullet</a></li>
-                        <li class="line"><a href="">line</a></li>
-                    </ul>
-                </div>
+    <footer class="mb_dev main_footer">
+        <div class="footer_top">
+            <div class="info_box_footer">
+                <ul class="menu_footer">
+                    <li><a href="">정보 처리 방침</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                </ul>
+                <ul class="info_bot">
+                    <li> ㈜고투어여행사</li>
+                    <li>주소 : (100-864) 서울특별시 중구 태평로2가 69-15 </li>
+                    <li>덕재빌딩 502호</li>
+                    <li>Tel: 02-777-0442 | Fax: 02-777-0443</li>
+                    <li>고객상담번호 : 070-7430-8463 (평일/주말 09:00~18:00) </li>
+                    <li>개인정보관리책임자 : 박성환</li>
+                    <li>관광사업자등록 : 일반여행업 제23호</li>
+                    <li>사업자등록번호 : 104-86-43305</li>
+                    <li>통신 판매업신고번호 : 서울중구 제0003호</li>
+                    <li>이메일: gotour77@naver.com</li>
+                </ul>
+            </div>
+            <div class="box_social">
+                <ul>
+                    <li class="fb"><a href="">facebook</a></li>
+                    <li class="tw"><a href="">twicter</a></li>
+                    <li class="bulet"><a href="">bullet</a></li>
+                    <li class="line"><a href="">line</a></li>
+                    <!-- <li class="naver"><a href="">naver</a></li>
+                        <li class="instagram"><a href="">instagram</a></li>
+                        <li class="youtube"><a href="">youtube</a></li>
+                        <li class="kakao"><a href="">kakao</a></li> -->
+                </ul>
             </div>
         </div>
-
         <div class="footer_bot">
             <p></p>
             © 2019 Primarynet.co.kr. All rights reserved.
@@ -221,7 +211,11 @@
     <!-- jQuery -->
     <script src="public/js/jquery.min.js"></script>
     <script src="public/js/slick.js"></script>
+    <script src="https://swiperjs.com/package/js/swiper.min.js"></script>
     <script src="public/js/mquery.js"></script>
+    <script src="public/js/uiMain.js"></script>
+    <!-- Initialize Swiper -->
+
 </body>
 
 </html>
