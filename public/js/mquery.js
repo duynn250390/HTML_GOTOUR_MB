@@ -663,7 +663,7 @@ $(document).on('click', '.item', function (e) {
     $('.list__rank').removeClass('on');
     $(this).addClass('on');
     var data_rank = $(this).attr('data-rank');
-    $('#ranking_00'+ data_rank).addClass('on');
+    $('#ranking_00' + data_rank).addClass('on');
 });
 // ===================TABS CONTACT=================
 $(document).on('click', '.item_tabs_Control', function (e) {
@@ -671,10 +671,45 @@ $(document).on('click', '.item_tabs_Control', function (e) {
     $('.tabs_control').removeClass('on');
     $(this).addClass('on');
     var data_form = $(this).attr('data-form');
-    $('#tabs_controll_00'+ data_form).addClass('on');
+    $('#tabs_controll_00' + data_form).addClass('on');
 });
 // ===================TABS CONTACT QA=================
 $(document).on('click', '.item_QA ', function (e) {
     $('.item_QA ').removeClass('on');
     $(this).addClass('on');
+});
+
+// ===================TABS FQA=================
+$(document).on('click', '.controlTabs_fqa .item_tabs', function (e) {
+    $('.controlTabs_fqa .item_tabs').removeClass('on');
+    $('.tabsintem ').removeClass('on');
+    $(this).addClass('on');
+    var data_tabs = $(this).attr('data-tabs');
+    $('#tabs-' + data_tabs).addClass('on');
+});
+//===================================OPEN MODAL===================================
+$(document).on('click', '.open_modal', function (e) {
+    var data_target = $(this).attr('data-target');
+    $('#' + data_target).addClass('open');
+    $('body').addClass('active_menu');
+    $("body").append("<div class='ovelay_modal fade open' id='ovelay_modal'></div>");
+
+});
+$(document).on('click', '.ovelay_modal', function (e) {
+    $('.modal').removeClass('open');
+    $('body').removeClass('active_menu');
+    $(this).remove();
+});
+$(document).on('click', '.btn', function (e) {
+    var dismiss = $(this).attr('dismiss');
+    if (dismiss === 'modal') {
+        $('.modal').removeClass('open');
+        $('body').removeClass('active_menu');
+        $('.ovelay_modal').remove();
+    }
+});
+$(document).on('click', '.modal.open', function (e) {
+    $('.modal').removeClass('open');
+    $('body').removeClass('active_menu');
+    $('.ovelay_modal').remove();
 });

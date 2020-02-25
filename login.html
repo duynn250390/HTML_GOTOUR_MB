@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>암호를 재설정</title>
+    <title>로그인</title>
 
     <!-- MyStyle CSS -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
@@ -23,7 +23,7 @@
     <header class="mb_dev main_headers">
         <div class="global_header">
             <div class="main_logo">
-                <span class="txt_menu">암호를 재설정</span>
+                <span class="txt_menu">로그인</span>
             </div>
             <div class="control_menu_back">
                 <div class="go_back hideText" id="go_back">Back</div>
@@ -105,20 +105,36 @@
         </div>
     </aside>
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
-        <section class="reset_password main_box">
-            <div class="box_cancel box_using_a">
-                <label class="title center">새로운 비밀번호를 입력하세요</label>
-                <div class="group">
-                    <label>비밀번호</label>
-                    <input type="password" placeholder="*******" class="contron_input">
+        <div class="main_login">
+            <div class="box_login">
+                <div class="group_form">
+                    <input class="form_in" type="text" placeholder="이메일">
+                    <span class="user"></span>
                 </div>
-                <div class="group">
-                    <label>비밀번호 확인</label>
-                    <input type="password" placeholder="*******" class="contron_input">
+                <div class="group_form">
+                    <input class="form_in" type="password" placeholder="이메일">
+                    <span class="pass"></span>
                 </div>
-                <button class="btn_send">코드 전송</button>
+                <div class="box_btn">
+                    <button type="submit" class="btn"></button>
+                </div>
             </div>
-        </section>
+            <div class="box_action">
+                <ul class="list_action">
+                    <li class="get_pass"><a href="">비밀번호 찾기</a></li>
+                    <li class="find_pass"><a href="">Email로 가입하기</a></li>
+                </ul>
+            </div>
+            <div class="box_social">
+                <div class="head">SNS 계정으로 로그인</div>
+                <ul class="social_list">
+                    <li><a href=""><img src="public/images/icon/icon_social01.png"></a></li>
+                    <li><a href=""><img src="public/images/icon/icon_social02.png"></a></li>
+                    <li><a href=""><img src="public/images/icon/icon_social03.png"></a></li>
+                    <li><a href=""><img src="public/images/icon/icon_social04.png"></a></li>
+                </ul>
+            </div>
+        </div>
     </aside>
     <footer class="mb_dev main_footer">
         <div class="footer_top">

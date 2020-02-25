@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>암호를 재설정</title>
+    <title>마이페이지</title>
 
     <!-- MyStyle CSS -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
@@ -19,11 +19,11 @@
     <!-- require js loading -->
 </head>
 
-<body>
+<body class="active_menu">
     <header class="mb_dev main_headers">
         <div class="global_header">
             <div class="main_logo">
-                <span class="txt_menu">암호를 재설정</span>
+                <span class="txt_menu">마이페이지</span>
             </div>
             <div class="control_menu_back">
                 <div class="go_back hideText" id="go_back">Back</div>
@@ -105,20 +105,61 @@
         </div>
     </aside>
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
-        <section class="reset_password main_box">
-            <div class="box_cancel box_using_a">
-                <label class="title center">새로운 비밀번호를 입력하세요</label>
-                <div class="group">
-                    <label>비밀번호</label>
-                    <input type="password" placeholder="*******" class="contron_input">
+        <ul class="main_dashboard">
+            <li class="item_dashboard noad1 open_modal" data-open="model" data-target="modal001">
+                <div  class="main_item_dashboard">
+                    <div class="item_db">
+                        <div class="icon"></div>
+                        <div class="title">Popup</div>
+                        <div class="note">Style 01</div>
+                    </div>
                 </div>
-                <div class="group">
-                    <label>비밀번호 확인</label>
-                    <input type="password" placeholder="*******" class="contron_input">
+            </li>
+            <li class="item_dashboard noad1">
+                <div  class="main_item_dashboard">
+                    <div class="item_db">
+                        <div class="icon"></div>
+                        <div class="title">Popup</div>
+                        <div class="note">Style 02</div>
+                    </div>
                 </div>
-                <button class="btn_send">코드 전송</button>
+            </li>
+            <li class="item_dashboard noad1">
+                <div  class="main_item_dashboard">
+                    <div class="item_db">
+                        <div class="icon"></div>
+                        <div class="title">Popup</div>
+                        <div class="note">Style 03</div>
+                    </div>
+                </div>
+            </li>
+            <li class="item_dashboard noad1">
+                <div  class="main_item_dashboard">
+                    <div class="item_db">
+                        <div class="icon"></div>
+                        <div class="title">Popup</div>
+                        <div class="note">Style 04</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <aside class="modal fade" id="modal001" tabindex="-1">
+        <div class="modal_dialog ">
+            <div class="modal_content">
+            <div class="md_head center">
+                <h5 class="modal_title">고객센터</h5>
+                <button class="btn_close btn "  dismiss="modal"></button>
             </div>
-        </section>
+            <div class="md_body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id tenetur quo vero? Consectetur, sint praesentium tempora optio ab commodi, soluta explicabo amet minima provident eveniet numquam, est voluptatem illum nam.
+            </div>
+            <div class="md_footer">
+                <button type="button" class="btn btn_close" dismiss="modal">Close</button>
+                <button type="button" class="btn btn_action">Action</button>
+            </div>
+            </div>
+        </div>
     </aside>
     <footer class="mb_dev main_footer">
         <div class="footer_top">
