@@ -690,15 +690,23 @@ $(document).on('click', '.controlTabs_fqa .item_tabs', function (e) {
 //===================================OPEN MODAL===================================
 $(document).on('click', '.open_modal', function (e) {
     var data_target = $(this).attr('data-target');
+    // $('#' + data_target).css({'display':'block'});
+    $('#' + data_target).show(100);
     $('#' + data_target).addClass('open');
     $('body').addClass('active_menu');
     $("body").append("<div class='ovelay_modal fade open' id='ovelay_modal'></div>");
 
 });
+function do_modal_close() {
+    $('.modal').css({'display':'none'});
+    // we don't want to call do_totals2 directly, because it is what hides the element.
+    window.setTimeout(do_modal_close, 40000);  // setTimeout accepts a function reference
+}
 $(document).on('click', '.ovelay_modal', function (e) {
     $('.modal').removeClass('open');
     $('body').removeClass('active_menu');
     $(this).remove();
+    setTimeout(function(){ $('.modal').css({'display':'none'}); }, 200);
 });
 $(document).on('click', '.btn', function (e) {
     var dismiss = $(this).attr('dismiss');
@@ -706,10 +714,18 @@ $(document).on('click', '.btn', function (e) {
         $('.modal').removeClass('open');
         $('body').removeClass('active_menu');
         $('.ovelay_modal').remove();
+        setTimeout(function(){ $('.modal').css({'display':'none'}); }, 200);
     }
 });
-$(document).on('click', '.modal.open', function (e) {
-    $('.modal').removeClass('open');
-    $('body').removeClass('active_menu');
-    $('.ovelay_modal').remove();
+$(document).on('mousedown', '.modal.open', function (e) {
+    e.preventDefault();
 });
+
+// $(document).on('click', '.modal.open', function (e) {
+//     $('.modal').removeClass('open');
+//     $('body').removeClass('active_menu');
+//     $('.ovelay_modal').remove();
+// });
+// $(document).on('click', '.modal_content', function (e) {
+
+// });
