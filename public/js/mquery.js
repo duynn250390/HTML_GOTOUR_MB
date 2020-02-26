@@ -717,15 +717,6 @@ $(document).on('click', '.btn', function (e) {
         setTimeout(function(){ $('.modal').css({'display':'none'}); }, 200);
     }
 });
-$(document).on('mousedown', '.modal.open', function (e) {
-    e.preventDefault();
-});
-
 // $(document).on('click', '.modal.open', function (e) {
-//     $('.modal').removeClass('open');
-//     $('body').removeClass('active_menu');
-//     $('.ovelay_modal').remove();
-// });
-// $(document).on('click', '.modal_content', function (e) {
-
+//     e.preventDefault();
 // });

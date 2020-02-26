@@ -4692,18 +4692,22 @@
 
         .group_box {
             margin-bottom: 15px;
-            &.items_boxs{
+
+            &.items_boxs {
                 display: flex;
                 flex-direction: row;
-                .item_box_group{
+
+                .item_box_group {
                     flex-grow: 1;
-                    flex-basis:50%;
+                    flex-basis: 50%;
                     margin-right: 10px;
-                    &:last-child{
+
+                    &:last-child {
                         margin-right: 0;
                     }
                 }
             }
+
             &.on_inline {
                 &:after {
                     @include clear_fix();
@@ -4995,28 +4999,31 @@
 
         }
     }
-    .edit_infor_member{
-        .group_box{
-            &.on_inline{
-             .text_info{
 
-             }   
+    .edit_infor_member {
+        .group_box {
+            &.on_inline {
+                .text_info {}
             }
-            .form_row{
-                .box_form{
-                    .choose_img{
+
+            .form_row {
+                .box_form {
+                    .choose_img {
                         position: relative;
-                        .txt_file{
+
+                        .txt_file {
                             padding-left: 45px;
                             overflow: hidden;
                         }
-                        .images{
+
+                        .images {
                             position: absolute;
                             height: 39px;
                             width: 38px;
                             left: 2px;
-                            top:1px;
-                            img{
+                            top: 1px;
+
+                            img {
                                 width: 100%;
                                 height: 100%;
                                 -o-object-fit: cover;
@@ -5031,9 +5038,10 @@
 }
 
 
-.bold{
+.bold {
     font-weight: 600;
 }
+
 .red_cl {
     color: #F7444E;
     margin-right: 5px;
@@ -5979,12 +5987,13 @@
     .box_head {
         min-height: 189px;
         background: url(../images/icon/mypagr_bg.png);
-        background-position: top center ;
+        background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
         position: relative;
         margin-bottom: 100px;
+
         .edit {
             position: absolute;
             height: 18px;
@@ -6002,7 +6011,7 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            bottom:-140px;
+            bottom: -140px;
 
             .thumb {
                 width: 90px;
@@ -6900,21 +6909,18 @@
     left: 0;
     overflow: hidden;
     outline: 0;
-    z-index: 9990;
+    z-index: 1002;
     background: rgba(0, 0, 0, 0.25);
     display: none;
     @include tran_slow_03();
+
     &.open {
         overflow-x: hidden;
         overflow-y: auto;
-        // display: block;
         pointer-events: none;
 
         .modal_dialog {
-            pointer-events: none;
-
             .modal_content {
-                pointer-events: auto;
             }
 
             -webkit-transform: translate(0, 0);
@@ -6938,12 +6944,14 @@
         transform: translate(0, -25%);
         // @include borderRadius(10px);
         overflow: hidden;
-        &.modal_center{
-            min-height: calc( 100% - ( 0.5em * 2 ));
+
+        &.modal_center {
+            min-height: calc(100% - (0.5em * 2));
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         .modal_content {
             position: relative;
             display: -webkit-box;
@@ -6954,9 +6962,10 @@
             -ms-flex-direction: column;
             flex-direction: column;
             width: 100%;
+            pointer-events: auto;
             background-color: #fff;
             background-clip: padding-box;
-            border: 1px solid rgba(0, 0, 0, .2);
+            border: 1px solid rgba(0,0,0,.2);
             border-radius: .3rem;
             outline: 0;
 
@@ -7027,7 +7036,7 @@
                     cursor: pointer;
                     padding: 0.5em 1em;
                     @include borderRadius(4px);
-
+                    @include tran_slow_03();
                     &.btn_close {
                         border: 1px solid #e4e4e4;
                         background: #fff;
@@ -7036,6 +7045,9 @@
                     &.btn_action {
                         background: #78BCC4;
                         color: #fff;
+                        @include hofo(){
+                            background: #3aafbd;
+                        }
                     }
 
                     &:last-child {
@@ -7066,6 +7078,58 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9989;
+    z-index: 1001;
     background-color: rgba(0, 0, 0, 0.2901960784313726);
+}
+
+.review_btn {
+    background: #C3F0F5;
+    padding: 0.5em 1em;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+.review_md {
+    .md_body {
+        .info_con {
+            color: #8D8D8D;
+        }
+
+        .body_area {
+            margin-top: 0.5em;
+
+            .fullcontrol {
+                min-height: 100px;
+                width: 100%;
+                border: 1px solid #C4C4C4;
+                padding: 0.5em;
+                outline: none;
+            }
+        }
+
+        .box_rate {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            padding: 1em 0;
+
+            .rate:not(:checked)>label:before,
+            .rate>input:checked~label {
+                width: 28px;
+                height: 28px;
+            }
+            .rate:not(:checked)>label{
+                margin-right: 0.5em;
+            }
+            .rate:not(:checked)>label:before {
+                background-image: url('../images/icon/icon_b.svg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+            .rate {
+                float: left;
+                display: block;
+            }
+        }
+    }
 }

@@ -283,6 +283,8 @@
                         <li class="icon_sao on"></li>
                         <li class="icon_sao"></li>
                     </ul>
+                    <div class="review_btn open_modal" data-open="model" data-target="modal_review01">Write a review
+                    </div>
                 </div>
                 <div class="info_boss__cm list_comment_qa">
                     <div class="boss_thumb">
@@ -707,6 +709,44 @@
                 <div class="box___more_item">예약하기</div>
             </div>
         </section>
+    </aside>
+    <aside class="modal fade review_md" id="modal_review01" tabindex="-1">
+        <div class="modal_dialog modal_center">
+            <div class="modal_content" id="modal_content">
+                <div class="md_head center">
+                    <h5 class="modal_title">Review</h5>
+                    <button class="btn_close btn " dismiss="modal"></button>
+                </div>
+                <div class="md_body">
+                    <div class="info_con">
+                        <p>Reviews are public and editable. Past edits are visible to the developer and
+                            users unless you delete your review altogether.</p>
+                    </div>
+                    <div class="body_area">
+                        <textarea class="fullcontrol"></textarea>
+                    </div>
+                    <div class="box_rate">
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5" title="text"></label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text"></label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text"></label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text"></label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="md_footer">
+                    <!-- <button type="button" class="btn btn_close" dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn_action">확인</button>
+                    <!-- <button type="button" class="btn btn_action">Action</button> -->
+                </div>
+            </div>
+        </div>
     </aside>
     <footer class="main_footer">
         <div class="container_dis">
