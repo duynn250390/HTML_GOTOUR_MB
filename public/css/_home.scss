@@ -4692,7 +4692,18 @@
 
         .group_box {
             margin-bottom: 15px;
-
+            &.items_boxs{
+                display: flex;
+                flex-direction: row;
+                .item_box_group{
+                    flex-grow: 1;
+                    flex-basis:50%;
+                    margin-right: 10px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
             &.on_inline {
                 &:after {
                     @include clear_fix();
@@ -4957,7 +4968,7 @@
 
                     .drop_down {
                         height: 40px;
-                        width: 30p;
+                        width: 30px;
                         background-color: #fff;
                         display: block;
                         position: absolute;
@@ -4984,8 +4995,45 @@
 
         }
     }
+    .edit_infor_member{
+        .group_box{
+            &.on_inline{
+             .text_info{
+
+             }   
+            }
+            .form_row{
+                .box_form{
+                    .choose_img{
+                        position: relative;
+                        .txt_file{
+                            padding-left: 45px;
+                            overflow: hidden;
+                        }
+                        .images{
+                            position: absolute;
+                            height: 39px;
+                            width: 38px;
+                            left: 2px;
+                            top:1px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                -o-object-fit: cover;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
+
+.bold{
+    font-weight: 600;
+}
 .red_cl {
     color: #F7444E;
     margin-right: 5px;
@@ -5929,14 +5977,14 @@
 
 .main_my_dashboad {
     .box_head {
-        min-height: 285px;
-        background: url(../images/icon/dashboard_bg.png);
-        background-position: center -80px;
+        min-height: 189px;
+        background: url(../images/icon/mypagr_bg.png);
+        background-position: top center ;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         display: block;
         position: relative;
-
+        margin-bottom: 100px;
         .edit {
             position: absolute;
             height: 18px;
@@ -5953,7 +6001,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 10em;
+            position: relative;
+            bottom:-140px;
 
             .thumb {
                 width: 90px;
@@ -6417,12 +6466,12 @@
 }
 
 .main_login {
-    background: url(../images/icon/bg_login.png);
+    background: url(../images/icon/login_bg.png);
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
     min-height: 285px;
-    padding-top: 4em;
+    // padding-top: 4em;
     margin-bottom: 3em;
 
     .box_login {
