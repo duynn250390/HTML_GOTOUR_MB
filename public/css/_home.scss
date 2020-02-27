@@ -3299,69 +3299,67 @@
         }
     }
 
-    .box_grid_day {
-        max-width: 600px;
-        min-width: 300px;
-        width: 100%;
-        margin: 0 auto;
+    // .box_grid_day {
+    //     width: 375px;
+    //     margin: 0 auto;
 
-        &:after {
-            @include clear_fix();
-        }
+    //     &:after {
+    //         @include clear_fix();
+    //     }
 
-        .item_day {
-            float: left;
-            width: 110px;
-            height: 110px;
-            padding: 5px;
+    //     .item_day {
+    //         float: left;
+    //         width: 110px;
+    //         height: 110px;
+    //         padding: 5px;
 
-            .deail_day {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                cursor: pointer;
-                font-size: px2em(16);
-                @include borderRadius(6px);
+    //         .deail_day {
+    //             display: flex;
+    //             align-items: center;
+    //             flex-direction: column;
+    //             justify-content: center;
+    //             width: 100%;
+    //             height: 100%;
+    //             cursor: pointer;
+    //             font-size: px2em(16);
+    //             @include borderRadius(6px);
 
-                @include maxWidth(480px) {
-                    font-size: px2em(13);
-                }
+    //             @include maxWidth(480px) {
+    //                 font-size: px2em(13);
+    //             }
 
-                span {
-                    display: block;
-                    color: #2E2E2E;
-                }
-            }
+    //             span {
+    //                 display: block;
+    //                 color: #2E2E2E;
+    //             }
+    //         }
 
-            &.curent_day {
-                .deail_day {
-                    background: #3F65AE;
-                    color: #fff;
-                    font-weight: 600;
-                    font-size: px2em(18);
+    //         &.curent_day {
+    //             .deail_day {
+    //                 background: #3F65AE;
+    //                 color: #fff;
+    //                 font-weight: 600;
+    //                 font-size: px2em(18);
 
-                    @include maxWidth(480px) {
-                        font-size: px2em(14);
-                    }
+    //                 @include maxWidth(480px) {
+    //                     font-size: px2em(14);
+    //                 }
 
-                    span {
-                        color: #fff;
-                    }
+    //                 span {
+    //                     color: #fff;
+    //                 }
 
-                    label {
-                        color: #fff;
+    //                 label {
+    //                     color: #fff;
 
-                        @include maxWidth(480px) {
-                            font-size: px2em(12);
-                        }
-                    }
-                }
-            }
-        }
-    }
+    //                     @include maxWidth(480px) {
+    //                         font-size: px2em(12);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     .listNameDay {
         max-width: 600px;
@@ -6920,8 +6918,7 @@
         pointer-events: none;
 
         .modal_dialog {
-            .modal_content {
-            }
+            .modal_content {}
 
             -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
@@ -6965,10 +6962,44 @@
             pointer-events: auto;
             background-color: #fff;
             background-clip: padding-box;
-            border: 1px solid rgba(0,0,0,.2);
+            border: 1px solid rgba(0, 0, 0, .2);
             border-radius: .3rem;
             outline: 0;
-
+            &.pinktime{
+                width: 375px;
+                .md_head{
+                    position: relative;
+                    .control_day{
+                        position: absolute;
+                        left: 10px;
+                        top: 1em;
+                        display: flex;
+                        flex-direction: row;
+                        .btn{
+                            height: 24px;
+                            width: 24px;
+                            background: #000;
+                            cursor: pointer;
+                            margin-right: 10px;
+                            &.btn_prev{
+                                background: url('../images/icon/icon_prev.svg');
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 100%;
+                            }
+                            &.btn_next{
+                                background: url('../images/icon/icon_next.svg');
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 100%;
+                            }
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
             .md_head {
                 display: flex;
                 flex-direction: row;
@@ -7010,7 +7041,7 @@
             .md_body {
                 min-height: 100px;
                 background: #fff;
-                padding: 0.5em;
+                padding: 7px;
             }
 
             .md_footer {
@@ -7037,6 +7068,7 @@
                     padding: 0.5em 1em;
                     @include borderRadius(4px);
                     @include tran_slow_03();
+
                     &.btn_close {
                         border: 1px solid #e4e4e4;
                         background: #fff;
@@ -7045,8 +7077,18 @@
                     &.btn_action {
                         background: #78BCC4;
                         color: #fff;
-                        @include hofo(){
+
+                        @include hofo() {
                             background: #3aafbd;
+                        }
+                    }
+
+                    &.btn_choose {
+                        color: #fff;
+                        @include gradianD();
+
+                        @include hofo() {
+                            @include gradianDH();
                         }
                     }
 
@@ -7118,18 +7160,217 @@
                 width: 28px;
                 height: 28px;
             }
-            .rate:not(:checked)>label{
+
+            .rate:not(:checked)>label {
                 margin-right: 0.5em;
             }
+
             .rate:not(:checked)>label:before {
                 background-image: url('../images/icon/icon_b.svg');
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
+
             .rate {
                 float: left;
                 display: block;
             }
         }
+    }
+}
+
+.box_action_choose {
+    padding: 0 10px;
+
+    .box_control_datime {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 1em;
+        margin-bottom: 1em;
+
+        .box_item {
+            grid-column: 12 span;
+            padding: 0.5em 0.5em;
+            background: #F7F8F3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .box_control {
+                background: #fff;
+                outline: none;
+                border: 1px solid $col09;
+                padding: 0 2em;
+                width: 200px;
+            }
+
+            .control_count {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 200px;
+
+                .number {
+                    font-size: px2em(16);
+                   
+                }
+
+                .icon_cout {
+                    display: flex;
+                    flex-direction: row;
+                    cursor: pointer;
+
+                    &::before {
+                        display: block;
+                        content: '';
+                        height: 24px;
+                        width: 24px;
+                        cursor: pointer;
+                        background-image: url('../images/icon/minus.png');
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                    }
+
+                }
+
+                .minus {
+                    &::before {
+                        background-image: url('../images/icon/minus.png');
+                    }
+
+                    @include hofo() {
+                        &::before {
+                            background-image: url('../images/icon/minusH.png');
+                        }
+                    }
+                }
+
+                .plus {
+                    &::before {
+                        margin-left: 1em;
+                        background-image: url('../images/icon/plus.png');
+                    }
+
+                    @include hofo() {
+                        &::before {
+                            background-image: url('../images/icon/plusH.png');
+                        }
+                    }
+                }
+            }
+
+            .icon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-weight: 600;
+                font-size: px2em(14);
+
+                &::before {
+                    margin-right: 1em;
+                    display: block;
+                    content: '';
+                    height: 24px;
+                    width: 24px;
+                    background-image: url('../images/icon/icon_Pick.png');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: center;
+                }
+            }
+
+            &.box_a {
+                .icon {
+                    &::before {
+                        background-image: url('../images/icon/icon_Pick.png');
+                    }
+                }
+            }
+
+            &.box_b {
+                .icon {
+                    &::before {
+                        background-image: url('../images/icon/icon_auth.png');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box_grid_day {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+
+    &:after {
+        @include clear_fix();
+    }
+
+    .item_day {
+        float: left;
+        width: 110px;
+        height: 110px;
+        padding: 5px;
+
+        .deail_day {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            font-size: px2em(14);
+            @include borderRadius(6px);
+
+            @include maxWidth(480px) {
+                font-size: px2em(13);
+            }
+
+            span {
+                display: block;
+                color: #2E2E2E;
+            }
+        }
+
+        &.curent_day {
+            .deail_day {
+                background: #3F65AE;
+                color: #fff;
+                font-weight: 600;
+                font-size: px2em(14);
+
+              
+                span {
+                    color: #fff;
+                }
+
+                label {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.listNameDay {
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+
+    &:after {
+        @include clear_fix();
+    }
+
+    .box_name_day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        color: #BFBFBF;
     }
 }

@@ -583,15 +583,17 @@ function Slide_article() {
     });
 }
 function timePick_day() {
+    var width_n = $(window).width();
     var box_grid_day = $('.box_grid_day');
+    var modal_content  = $('.modal_content ');
     var item_day = $('.item_day');
-    var width_box_grid_day = box_grid_day.width();
+    var modal_content_W = modal_content.width();
     item_day.css({
-        'width': width_box_grid_day / 7 + 'px',
-        'height': width_box_grid_day / 7 + 'px',
+        'width': (modal_content_W-14) / 7 + 'px',
+        'height': (modal_content_W-14) / 7 + 'px',
     });
     $('.box_name_day').css({
-        'width': width_box_grid_day / 7 + 'px',
+        'width': (modal_content_W-14) / 7 + 'px',
     });
 }
 $(document).on('click', '.close_icon', function () {
