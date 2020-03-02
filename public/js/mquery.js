@@ -585,15 +585,15 @@ function Slide_article() {
 function timePick_day() {
     var width_n = $(window).width();
     var box_grid_day = $('.box_grid_day');
-    var modal_content  = $('.modal_content ');
+    var modal_content = $('.modal_content ');
     var item_day = $('.item_day');
     var modal_content_W = modal_content.width();
     item_day.css({
-        'width': (modal_content_W-14) / 7 + 'px',
-        'height': (modal_content_W-14) / 7 + 'px',
+        'width': (modal_content_W - 14) / 7 + 'px',
+        'height': (modal_content_W - 14) / 7 + 'px',
     });
     $('.box_name_day').css({
-        'width': (modal_content_W-14) / 7 + 'px',
+        'width': (modal_content_W - 14) / 7 + 'px',
     });
 }
 $(document).on('click', '.close_icon', function () {
@@ -700,7 +700,7 @@ $(document).on('click', '.open_modal', function (e) {
 
 });
 function do_modal_close() {
-    $('.modal').css({'display':'none'});
+    $('.modal').css({ 'display': 'none' });
     // we don't want to call do_totals2 directly, because it is what hides the element.
     window.setTimeout(do_modal_close, 40000);  // setTimeout accepts a function reference
 }
@@ -708,7 +708,7 @@ $(document).on('click', '.ovelay_modal', function (e) {
     $('.modal').removeClass('open');
     $('body').removeClass('active_menu');
     $(this).remove();
-    setTimeout(function(){ $('.modal').css({'display':'none'}); }, 200);
+    setTimeout(function () { $('.modal').css({ 'display': 'none' }); }, 200);
 });
 $(document).on('click', '.btn', function (e) {
     var dismiss = $(this).attr('dismiss');
@@ -716,9 +716,41 @@ $(document).on('click', '.btn', function (e) {
         $('.modal').removeClass('open');
         $('body').removeClass('active_menu');
         $('.ovelay_modal').remove();
-        setTimeout(function(){ $('.modal').css({'display':'none'}); }, 200);
+        setTimeout(function () { $('.modal').css({ 'display': 'none' }); }, 200);
     }
 });
 // $(document).on('click', '.modal.open', function (e) {
 //     e.preventDefault();
 // });
+
+$(document).on('click', '.menu-category .menu_list .menu_item', function (e) {
+    var data_category = $(this).attr('data-category');
+    var set = localStorage.setItem("category", data_category);
+});
+
+$(document).ready(function () {
+
+    var get = localStorage.getItem("category");
+    var a = $('.menu-category .menu_list .menu_item').attr('data-category');
+    var test
+    $.each($('.menu-category .menu_list .menu_item'), function (k, v) {
+        if (get == $(v).text()) {
+            test = v
+        }
+    });
+
+    if (get == undefined) {
+
+        if ($('.menu-category .menu_list').hasClass("on")) {
+            var active = $(test).parent().addClass("on")
+        }
+        $("#title-head").html(get);
+    } else {
+        if ($('.menu-category .menu_list').hasClass("on")) {
+            $('.menu-category .menu_list').removeClass("on")
+            var active = $(test).parent().addClass("on")
+        }
+        $("#title-head").html(get);
+    }
+    document.title = get;
+});

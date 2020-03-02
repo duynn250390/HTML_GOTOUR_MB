@@ -1,17 +1,27 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var rename = require('gulp-rename');
-var minifyCss = require('gulp-cssnano');
-var browserSync = require('browser-sync');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    connect = require('gulp-connect'),
+    rename = require('gulp-rename'),
+    minifyCss = require('gulp-cssnano'),
+    browserSync = require('browser-sync'),
+    fileinclude = require('gulp-file-include');
 
 // // compile task
 // var gulp = require('gulp');
 // var sass = require('gulp-sass');
 // var browserSync = require('browser-sync');
 
+
+gulp.sources = {
+    build: './build',
+    layout: './layout',
+    public: './public'
+};
+
+
 // compile task
 gulp.task('sass', function () {
-    gulp.src('public/css/**/*.scss')
+    gulp.src(gulp.sources.public + '/css/**/*.scss')
         .pipe(sass())
         .pipe(minifyCss())
         .pipe(rename('style.css'))
@@ -22,9 +32,30 @@ gulp.task('sass', function () {
         }))
         .pipe(browserSync.stream());
 });
+// compile task
+// gulp.task('build_html', function () {
+//     gulp.src(gulp.sources.layout + '/**/*.html')
+//         .pipe(fileinclude({
+//             prefix: '@@',
+//             basepath: '@file'
+//         }))
+//         .pipe(browserSync.stream());
+// });
+// Include HTML
+gulp.task('fileinclude', () => {
+    gulp.src(gulp.sources.build + '/*.html')
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./'))
+      .pipe(browserSync.stream());
+  });
+
+  
 
 // browser sync init
-gulp.task('browser-sync', ['sass'], function () {
+gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -34,7 +65,10 @@ gulp.task('browser-sync', ['sass'], function () {
 
 // watch for changes in html, css, scss
 gulp.task('default', ['browser-sync'], function () {
-    gulp.watch('public/css/**/*.scss', ['sass']);
+    gulp.watch(gulp.sources.public + '/css/**/*.scss', ['sass']);
+    gulp.watch(gulp.sources.layout + '/*.html', ['fileinclude']);
+    gulp.watch('/*.html', ['fileinclude']);
+    console.log('quần');
     gulp.watch('*.html')
         .on('change', browserSync.reload);
 })

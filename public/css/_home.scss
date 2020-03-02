@@ -3967,6 +3967,7 @@
     }
 }
 
+
 .mb_dev {
     &.main_headers {
         position: fixed;
@@ -6965,41 +6966,49 @@
             border: 1px solid rgba(0, 0, 0, .2);
             border-radius: .3rem;
             outline: 0;
-            &.pinktime{
+
+            &.pinktime {
                 width: 375px;
-                .md_head{
+
+                .md_head {
                     position: relative;
-                    .control_day{
+
+                    .control_day {
                         position: absolute;
                         left: 10px;
                         top: 1em;
                         display: flex;
                         flex-direction: row;
-                        .btn{
+
+                        .btn {
                             height: 24px;
                             width: 24px;
                             background: #000;
                             cursor: pointer;
                             margin-right: 10px;
-                            &.btn_prev{
+
+                            &.btn_prev {
                                 background: url('../images/icon/icon_prev.svg');
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: 100%;
                             }
-                            &.btn_next{
+
+                            &.btn_next {
                                 background: url('../images/icon/icon_next.svg');
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: 100%;
                             }
-                            &:last-child{
+
+                            &:last-child {
                                 margin-right: 0;
                             }
                         }
                     }
                 }
             }
+
             .md_head {
                 display: flex;
                 flex-direction: row;
@@ -7213,7 +7222,7 @@
 
                 .number {
                     font-size: px2em(16);
-                   
+
                 }
 
                 .icon_cout {
@@ -7343,7 +7352,7 @@
                 font-weight: 600;
                 font-size: px2em(14);
 
-              
+
                 span {
                     color: #fff;
                 }
