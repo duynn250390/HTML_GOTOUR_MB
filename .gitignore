@@ -1,7 +1,7 @@
 node_modules
+build
+layout
 package-lock.json
 package.json
 gulpfile.js
-/build
-/layout
-# *.scss
+public/css/*.scss

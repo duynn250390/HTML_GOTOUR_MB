@@ -723,34 +723,62 @@ $(document).on('click', '.btn', function (e) {
 //     e.preventDefault();
 // });
 
-$(document).on('click', '.menu-category .menu_list .menu_item', function (e) {
+$(document).on('click', '.menu .menu_list .menu_item', function (e) {
     var data_category = $(this).attr('data-category');
+    var data_activeMenu = $(this).attr('data-active-menu');
     var set = localStorage.setItem("category", data_category);
+    var setActiveMenu = localStorage.setItem("activeMenu", data_activeMenu);
 });
 
 $(document).ready(function () {
-
+    var getURL = $(location).attr('pathname').slice(1);
+    if(getURL == 'home.html'||getURL == 'review_list.html'||getURL == 'contact_list_01.html'||getURL == 'info_hallyo.html' || getURL == 'notice.html'){
+        localStorage.removeItem('category');
+    }
+    switch(getURL){
+        case 'home.html':
+            document.title = 'Home Page';
+          break;
+        case 'review_list.html':
+            document.title = '리뷰';
+          break;
+        case 'contact_list_01.html':
+            document.title = '문의하기';
+          break;
+        case 'info_hallyo.html':
+          document.title = 'Info Hallyo';
+          break;
+        case 'notice.html':
+            document.title = '리뷰';
+          break;
+        default:
+          // code block
+      }
+    
     var get = localStorage.getItem("category");
-    var a = $('.menu-category .menu_list .menu_item').attr('data-category');
+    var get_activeMenu = localStorage.getItem("activeMenu");
+    var a = $('.menu .menu_list .menu_item').attr('data-category');
+    var b = $('.menu .menu_list .menu_item').attr('data-active-menu');
     var test
-    $.each($('.menu-category .menu_list .menu_item'), function (k, v) {
-        if (get == $(v).text()) {
+    $.each($('.menu .menu_list .menu_item'), function (k, v) {
+        if (get_activeMenu == $(v).text()) {
             test = v
         }
     });
 
-    if (get == undefined) {
-
-        if ($('.menu-category .menu_list').hasClass("on")) {
-            var active = $(test).parent().addClass("on")
-        }
-        $("#title-head").html(get);
-    } else {
-        if ($('.menu-category .menu_list').hasClass("on")) {
-            $('.menu-category .menu_list').removeClass("on")
-            var active = $(test).parent().addClass("on")
-        }
-        $("#title-head").html(get);
+    if ($('.menu .menu_list').hasClass("on")) {
+        $('.menu .menu_list').removeClass('on');
+        var active = $(test).parent().addClass("on")
     }
-    document.title = get;
+    if (get == undefined || get === "undefined") {
+        
+    } else {
+        if ($('.menu .menu_list').hasClass("on")) {
+            $('.menu .menu_list').removeClass("on")
+            var active = $(test).parent().addClass("on")
+        }
+        $("#title-head").html(get);
+        document.title = get;
+    }
+
 });
