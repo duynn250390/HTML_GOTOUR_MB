@@ -44,7 +44,6 @@ $(document).ready(function () {
     if ($('.item_warap').length > 0) {
         $(document).on('click', '.item_list', function () {
             var data_tabs = $(this).attr('data-tabs');
-            console.log(data_tabs);
             $('.item_list').removeClass('on');
             $(this).addClass('on');
             $('.item_warap').removeClass('on');
