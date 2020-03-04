@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go Tour Home Page</title>
+
+    <!-- MyStyle CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- require js loading -->
+</head>
+
+<body>
+    <header class="mb_dev main_headers">
+        <div class="global_header">
+            <div class="main_logo">
+                <div class="txt_menu" id="title-head">마이페이지</div>
+            </div>
+            <div class="control_menu_back">
+                <div class="go_back hideText">Go Back</div>
+                <div class="menu_slide show_menu hideText" id="menu_slide">Menu</div>
+            </div>
+            <div class="search_slide hideText" id="search_action">검색열기</div>
+        </div>
+    </header>
+    <aside class="menu_mb">
+        <div class="mn_top">
+            <a href="home.html" class="icon_home hideText">Home</a>
+            <a href="" class="icon_seting hideText">Seting</a>
+            <div class="acount">
+                <div class="thumb">
+                    <a href="home.html">
+                        <span class="img_acount" style="background-image: none;"></span>
+                    </a>
+                </div>
+                <div class="info_acount">
+                    <div class="n1">로그인을 해주세요</div>
+                    <div class="n2">예매확인</div>
+                </div>
+            </div>
+        </div>
+        <div class="mn_body">
+            <nav class="main_menu">
+                <ul class="menu ">
+                    <li class="menu_list on"><a href="list_item_category.html" class="menu_item" data-category="KPOP/콘서트" data-active-menu='KPOP/콘서트'>KPOP/콘서트</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="공연/뮤지컬" data-active-menu='공연/뮤지컬'>공연/뮤지컬</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="전시/행사" data-active-menu='전시/행사'>전시/행사</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="현지투어/체험" data-active-menu='현지투어/체험'>현지투어/체험</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="팬미팅/이벤트" data-active-menu='팬미팅/이벤트'>팬미팅/이벤트</a></li>
+                </ul>
+                <ul class="menu">
+                    <li class="menu_list"><a href="contact_list_01.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
+                    </li>
+                    <li class="menu_list"><a href="review_list.html" class="menu_item" data-active-menu='랭킹'>랭킹</a></li>
+                    <li class="menu_list"><a href="info_hallyo.html" class="menu_item" data-active-menu='한류정'>한류정</a></li>
+                    <li class="menu_list"><a href="notice.html" class="menu_item" data-active-menu='공지사'>공지사</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <aside class="search_box">
+        <div class="main_search">
+            <div class="group_search">
+                <div class="main_input">
+                    <input type="text" placeholder="Search..." class="control_input">
+                    <button class="btn_search hideText">dsd</button>
+                </div>
+            </div>
+            <div class="auto_tag_complate">
+                <ul class="sum_tags_search">
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
+        <section class="main_content respoMenu main_content___detail">
+            <div class="box__top_detail">
+                <div class="ovelay_bg">
+                    <img src="./public/images/hot_news/thumb_news_top_e.png" alt="롤링 25주년 기념 공연 vol．" />
+                </div>
+                <div class="box_detail__info">
+                    <div class="detail__info_left">
+                        <div class="text_top">평가<span>8.5</span></div>
+                        <div class="ticked_artor">티켓캐스트</div>
+                    </div>
+                    <div class="detail__info_center" style="background-image: url(./public/images/hot_news/oz1.png);">
+                    </div>
+                    <div class="detail__info_right">
+                        <div class="text_top">
+                            <span class="text">랭킹</span><span class="num">2</span>
+                        </div>
+                        <div class="sharing">공유하기</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box__top_info">
+                <div class="sum__info">
+                    <div class="top_title">뮤지컬 <엑스칼리버>
+                    </div>
+                    <div class="bot_title">홍익대학교 대학로 아트센터</div>
+                    <div class="info_day">
+                        <span class="fromdate">2019.28.27</span>
+                        <span class="todate">2019.08.31</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="dy_wrap_detail" id="dy_wrap_detail">
+            <div class="dy_wrap_detail_tabs" id="dy_wrap_detail_tabs">
+                <ul class="list_detail">
+                    <li class="item_list on" data-tabs='1'>상세 정보</li>
+                    <li class="item_list " data-tabs='2'>관람 후기 </li>
+                    <li class="item_list " data-tabs='3'>Q&A </li>
+                    <li class="item_list" data-tabs='4'>공연장정보</li>
+                    <li class="item_list " data-tabs='5'>예매안내</li>
+                </ul>
+            </div>
+        </div>
+        <aside class="item_warap on" id="item___warrap_1">
+            <section class="box_box">
+                <div class="heading_title">예매안내</div>
+                <div class="box_content">
+                    <p> 예매번호가 포함되어 있는 예매확인서와 예매자의 실물 신분증(복사본 및 사진 불가) 을 매표소에 제출하시면 편리하게 티켓을 수령하실 수 있습니다</p>
+                    <p>※ 공연별 정책이 상이하니 자세한 내용은 예매페이지 내 상세정보 확인 부탁드립니다.</p>
+                    <p>· 일괄배송의 경우 공연 별로 배송일자가 상이하며 지정된 배송일자 기준으로 배송이 시작됩니다. (지정된 배송일자는 상세정보 및 예매공지사항에서 확인할 수 있습니다.) </p>
+                    <p>· 취소마감시간 이후 또는 관람일 당일 예매하신 건에 대해서는 취소/변경/환불이 불가합니다.</p>
+                </div>
+            </section>
+            <section class="box_box">
+                <div class="heading_title">가격정보
+                    <div class="box_btn_right">
+                        <a href="">가격상세보기</a>
+                    </div>
+                </div>
+                <h5 class="tit_detail_sub">기본가견</h5>
+                <ul class="list_seat">
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #8DB3F3;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #C3F0F5;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #B6C0D4;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #EBF586;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #76F3C1;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #FFA8F9;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #F3B953;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                    <li class="item_seat">
+                        <span class="seat_color" style="background-color: #F39B8D;"></span>
+                        <span class="seat_name">VIP 석 (금,토,일,공...</span>
+                        <span class="seat_price">150,000원</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="box_box">
+                <div class="heading_title yes_color">상세정보</div>
+                <ul class="list_tiki">
+                    <li>기대평<span>12</span></li>
+                    <li>관람후기<span>12</span></li>
+                    <li>Q&A <span>12</span></li>
+                </ul>
+                <ul class="list_laza">
+                    <li class="check">
+                        <div class="thumb ">
+                            <img src="public/images/hot_news/thumbs_b.png" alt="avataMem">
+                        </div>
+                        <div class="name">빅톤</div>
+                        <div class="bot_name">남겨주세요.</div>
+                    </li>
+                    <li class="check">
+                        <div class="thumb">
+                            <img src="public/images/hot_news/thumbs_d.png" alt="avataMem">
+                        </div>
+                        <div class="name">빅톤</div>
+                        <div class="bot_name">남겨주세요.</div>
+                    </li>
+                    <li class="check">
+                        <div class="thumb">
+                            <img src="public/images/hot_news/thumbs_a.png" alt="avataMem">
+                        </div>
+                        <div class="name">빅톤</div>
+                        <div class="bot_name">남겨주세요.</div>
+                    </li>
+                    <li class="check">
+                        <div class="thumb">
+                            <img src="public/images/hot_news/thumbs_f.png" alt="avataMem">
+                        </div>
+                        <div class="name">빅톤</div>
+                        <div class="bot_name">남겨주세요.</div>
+                    </li>
+                </ul>
+                <div class="go_list">
+                    <a href="">빅톤</a>
+                </div>
+            </section>
+            <section class="box_box">
+                <div class="heading_title ">예매 공지사항</div>
+                <div class="content_bao">
+                    <p>2019년 11월 28일(목) 오후 4시 ~ 12월 2일(월) 23시 59분까지</p>
+                    <p>2019년 12월 2일(월) 오후 8시 ~ 12월 2일(월) 23시 59분까지</p>
+                    <p>※ 일반예매 : 2019년 12월 4일(수) 오후 8시</p>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</p>
+                </div>
+            </section>
+            <section class="galery_box">
+                <img src="public/images/\hot_news/galery_box_001.png" class="img_thumb">
+            </section>
+        </aside>
+        <aside class="item_warap " id="item___warrap_2">
+            <section class="section__001">
+                <ul class="nut_box" id="nut_box">
+                    <li class="on">입력</li>
+                    <li>입력</li>
+                </ul>
+                <div class="result_review">
+                    <div class="title">현재 종합 평점</div>
+                    <ul class="item_star">
+                        <li class="icon_sao on"></li>
+                        <li class="icon_sao on"></li>
+                        <li class="icon_sao on"></li>
+                        <li class="icon_sao on"></li>
+                        <li class="icon_sao"></li>
+                    </ul>
+                    <div class="review_btn open_modal" data-open="model" data-target="modal_review01">Write a review
+                    </div>
+                </div>
+                <div class="info_boss__cm list_comment_qa">
+                    <div class="boss_thumb">
+                        <img src="public/images/hot_news/thumbs_c.png">
+                    </div>
+                    <div class="bos_info comment_item">
+                        <div class="ques">
+                            <div class="tit">
+                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                <span class="name">정으닐</span>
+                                <span class="day">2019.11.11</span>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <button class="btn_like on">12</button>
+                            <button class="btn_don_like">5</button>
+                            
+                        </div>
+                    </div>
+                    <div class="show show_comment" id="show_comment">
+                        <span></span>
+                    </div>
+                </div>
+                <ul class="list_comment_qa list_cmqa" id="list_comment_qa">
+                    <li class="comment_item">
+                        <div class="ques">
+                            <div class="tit">
+                                <span class="ico">Q</span>
+                                <span class="name">정으닐</span>
+                                <span class="day">2019.11.11</span>
+                                <span class="btn"><a href="">신고</a></span>
+                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <button class="btn_like on">12</button>
+                            <button class="btn_don_like">5</button>
+                            
+                        </div>
+                    </li>
+                    <li class="comment_item">
+                        <div class="ques">
+                            <div class="tit">
+                                <span class="ico">Q</span>
+                                <span class="name">정으닐</span>
+                                <span class="day">2019.11.11</span>
+                                <span class="btn"><a href="">신고</a></span>
+                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <button class="btn_like on">12</button>
+                            <button class="btn_don_like">5</button>
+                            
+                        </div>
+                    </li>
+                    <li class="comment_item">
+                        <div class="ques">
+                            <div class="tit">
+                                <span class="ico">Q</span>
+                                <span class="name">정으닐</span>
+                                <span class="day">2019.11.11</span>
+                                <span class="btn"><a href="">신고</a></span>
+                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <button class="btn_like on">12</button>
+                            <button class="btn_don_like">5</button>
+                            
+                        </div>
+                    </li>
+                    <li class="comment_item">
+                        <div class="ques">
+                            <div class="tit">
+                                <span class="ico">Q</span>
+                                <span class="name">정으닐</span>
+                                <span class="day">2019.11.11</span>
+                                <span class="btn"><a href="">신고</a></span>
+                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <button class="btn_like on">12</button>
+                            <button class="btn_don_like">5</button>
+                            
+                        </div>
+                    </li>
+                    <li class="comment_item">
+                        <div class="ques">
+                            <div class="tit">
+                                <span class="ico">Q</span>
+                                <span class="name">정으닐</span>
+                                <span class="day">2019.11.11</span>
+                                <span class="btn"><a href="">신고</a></span>
+                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <button class="btn_like on">12</button>
+                            <button class="btn_don_like">5</button>
+                            
+                        </div>
+                    </li>
+                </ul>
+                <div class="hide_comment" id="hide_comment">
+                    <span></span>
+                </div>
+            </section>
+        </aside>
+        <aside class="item_warap " id="item___warrap_3">
+            <section class="section__001">
+                <div class="heading_top">
+                    Q&A 게시판은 여러분 모두<br />
+                    질문과 답변에 참여할 수 있는 공간입니다.
+                </div>
+                    <div class="heading_bot">
+                        예매/배송 관련 문의 : 고객센터>1:1문의 or 이용안내
+                    </div>
+                    <div class="box_ip">
+                        <input type="text" placeholder="이 공연에 대한 기대평을 남겨주세요." />
+                        <button>입력</button>
+                    </div>
+                    <div class="info_boss__cm list_comment_qa">
+                        <div class="boss_thumb">
+                            <img src="public/images/hot_news/thumbs_c.png">
+                        </div>
+                        <div class="bos_info comment_item">
+                            <div class="ques">
+                                <div class="tit">
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                    <span class="name">정으닐</span>
+                                    <span class="day">2019.11.11</span>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_like on">12</button>
+                                <button class="btn_don_like">5</button>
+                                <a href="" class="btn_reply">
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="show show_comment" id="show_comment">
+                            <span></span>
+                        </div>
+                    </div>
+                    <ul class="list_comment_qa list_cmqa" id="list_comment_qa">
+                        <li class="comment_item">
+                            <div class="ques">
+                                <div class="tit">
+                                    <span class="ico">Q</span>
+                                    <span class="name">정으닐</span>
+                                    <span class="day">2019.11.11</span>
+                                    <span class="btn"><a href="">신고</a></span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_like on">12</button>
+                                <button class="btn_don_like">5</button>
+                                <a href="" class="btn_reply">
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="comment_item">
+                            <div class="ques">
+                                <div class="tit">
+                                    <span class="ico">Q</span>
+                                    <span class="name">정으닐</span>
+                                    <span class="day">2019.11.11</span>
+                                    <span class="btn"><a href="">신고</a></span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_like on">12</button>
+                                <button class="btn_don_like">5</button>
+                                <a href="" class="btn_reply">
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="comment_item">
+                            <div class="ques">
+                                <div class="tit">
+                                    <span class="ico">Q</span>
+                                    <span class="name">정으닐</span>
+                                    <span class="day">2019.11.11</span>
+                                    <span class="btn"><a href="">신고</a></span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_like on">12</button>
+                                <button class="btn_don_like">5</button>
+                                <a href="" class="btn_reply">
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="comment_item">
+                            <div class="ques">
+                                <div class="tit">
+                                    <span class="ico">Q</span>
+                                    <span class="name">정으닐</span>
+                                    <span class="day">2019.11.11</span>
+                                    <span class="btn"><a href="">신고</a></span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_like on">12</button>
+                                <button class="btn_don_like">5</button>
+                                <a href="" class="btn_reply">
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="comment_item">
+                            <div class="ques">
+                                <div class="tit">
+                                    <span class="ico">Q</span>
+                                    <span class="name">정으닐</span>
+                                    <span class="day">2019.11.11</span>
+                                    <span class="btn"><a href="">신고</a></span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_like on">12</button>
+                                <button class="btn_don_like">5</button>
+                                <a href="" class="btn_reply">
+
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="hide_comment" id="hide_comment">
+                        <span></span>
+                    </div>
+            </section>
+        </aside>
+        <aside class="item_warap" id="item___warrap_4">
+            <div class="box_view_warap">
+                <div class="box_img">
+                    <img src="public/images/hot_news/dog.png" />
+                </div>
+                <div class="box_txt">
+                    <h4 class="tit_detail">현대카드 UNDERSTAGE, 언더
+                        스테이지</h4>
+                    <div class="info">
+                        <p>서울 용산구 한남동 </p>
+                        <p>683-132</p>
+                    </div>
+                    <div class="site">http://understage.hyundaicard.com/main.do</div>
+                </div>
+            </div>
+            <div class="box_box box_maps">
+                <div class="heading_title">공연장위치
+                    <div class="box_btn_right">
+                        <a href="">지도보기</a>
+                    </div>
+                </div>
+                <div class="maps">
+                    <img src="public/images/hot_news/maps.png">
+                </div>
+            </div>
+        </aside>
+        <aside class="item_warap " id="item___warrap_5">
+            <section class="box_box">
+                <div class="heading_title">티켓 수령 방법 안내</div>
+                <div class="box_content">
+                    <p>· 예매번호가 포함되어 있는 예매확인서와 예매자의 실물 신분증(복사본 및 사진 불가) 을 매표소에 제출하시면 편리하게 티켓을 수령하실 수 있습니다.</p>
+                    <p>공연별 정책이 상이하니 자세한 내용은 예매페이지 내 상세정보 확인 부탁드립니다.</p>
+                    <p>· 배송을 선택하신 경우 예매완료(결제익일) 기준 4~5일 이내에 예매 시 입력하신 주소로 배송됩니다. (주말/공휴일 제외한 영업일 기준)</p>
+                    <p>· 일괄배송의 경우 공연 별로 배송일자가 상이하며 지정된 배송일자 기준으로 배송이 시작됩니다. (지정된 배송일자는 상세정보 및 예매공지사항에서 확인할 수 있습니다.)</p>
+                    <p>· 지역 및 배송서비스 사정에 따라 배송사가 변경될 수 있으며, 배송일이 추가적으로 소요될 수 있습니다. (CJ대한통운, 우체국 외 1개 업체)</p>
+                </div>
+            </section>
+            <section class="box_box">
+                <div class="heading_title">취소/환불 안내</div>
+                <div class="box_content">
+                    <p>· 배송이 시작된 경우 취소마감시간 이전까지 멜론티켓 고객센터로 티켓을 반환해주셔야 환불이 가능하며, 도착한 일자 기준으로 취소수수료가 부과됩니다. (* 단, 반환된 티켓의
+                        배송료는 환불되지 않으며 일괄배송 상품의 경우 취소에 대한 자세한 문의는 고객센터로 문의해 주시기 바랍니다.)
+                        · 예매취소 시점과 결제 시 사용하신 신용카드사의 환불 처리기준에 따라 취소금액의 환급방법과 환급일은 다소 차이가 있을 수 있습니다.
+                        · 취소일자에 따라 아래와 같이 취소수수료가 부과됩니다. (예매 후 7일 이내라도 취소시점이 관람일로부터 10일 이내라면 관람일 기준의 취소수수료가 부과됩니다.)</p>
+                </div>
+            </section>
+            <section class="box_box">
+                <div class="heading_title">예매안내</div>
+                <div class="sum_table">
+                    <div class="colum_box heading">
+                        <div class="item_row">취소일</div>
+                        <div class="item_row">취소일</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row">예매 후 8일 ~ 관람일
+                            10일이내</div>
+                        <div class="item_row">없음</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row">장당 4000원
+                            (티켓금액의 10%한도)</div>
+                        <div class="item_row">장당 4000원
+                            (티켓금액의 10%한도)</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row">관람일 9일 전 ~ 7일전</div>
+                        <div class="item_row">티켓금액의 10%</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row">관람일 9일 전 ~ 7일전</div>
+                        <div class="item_row">티켓금액의 10%</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row">관람일 9일 전 ~ 7일전</div>
+                        <div class="item_row">티켓금액의 10%</div>
+                    </div>
+                </div>
+            </section>
+            <section class="box_box">
+                <div class="heading_title">상품정보제공 고시</div>
+                <div class="sum_table table_a">
+                    <div class="colum_box ">
+                        <div class="item_row bold">주최/기획</div>
+                        <div class="item_row">(주)알앤디웍스</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row bold">공연 관련 문의</div>
+                        <div class="item_row">클립서비스 1577-3363</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row bold">예매 관련 문의</div>
+                        <div class="item_row">1899-0042</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row bold">이용가능장소</div>
+                        <div class="item_row">홍익대학교 대학로 아트센터대극장</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row bold">유효기간(이용조건)</div>
+                        <div class="item_row">2019.11.16 - 2020.02.02 (예매한
+                            공연 회차에 한해 이용 가능)</div>
+                    </div>
+                </div>
+            </section>
+            <section class="box_box">
+                <div class="heading_title">신용카드 결제방법 안내</div>
+                <div class="sum_table table_a">
+                    <div class="colum_box ">
+                        <div class="item_row bold">인터넷 안전결제(ISP)</div>
+                        <div class="item_row">국민/BC/우리/우체국/제주은행/전북은
+                            행/광주은행/수협카드 등</div>
+                    </div>
+                    <div class="colum_box ">
+                        <div class="item_row bold">안심클릭 서비스</div>
+                        <div class="item_row">신한/현대/삼성/하나(구 외환/하나SK)/
+                            롯데/NH/씨티카드</div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <div class="box___more booktour">
+            <div class="box___more_item"><a href="#">더보기</a></div>
+        </div>
+        <section class="main_content postter product_more">
+            <div class="title_heading">연관 상품</div>
+            <ul class="post_list___tabs active" id="active_tabs__2">
+                <li class="poster__list__item list_full">
+                    <a href="" class="poster__list__item_warap">
+                        <div class="news__item_thumb">
+                            <img src="public/images/share/item_news01.png" class="img_thumb">
+                        </div>
+                        <div class="news__item_text">
+                            <div class="title">젊은이의 거리 홍대 도보 여행</div>
+                            <div class="description">
+                                <p>젊은이의 거리 홍대를 일본어 가이드와 함께 즐길 수 있는 투어입니다.</p>
+
+                                <ul>
+                                    <li>지역 : Sapa, Sa Pa, Lào Cai, Việt Nam</li>
+                                    <li>시간 : <span>2019.12.25~2020.01.10</span></li>
+                                    <li>포함 내역 : Let's discovery Sapa with us!</li>
+                                </ul>
+                            </div>
+                            <div class="money">5,000원</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="poster__list__item list_full">
+                    <a href="" class="poster__list__item_warap">
+                        <div class="news__item_thumb">
+                            <img src="public/images/share/item_news02.png" class="img_thumb">
+                        </div>
+                        <div class="news__item_text">
+                            <div class="title">젊은이의 거리 홍대 도보 여행</div>
+                            <div class="description">
+                                <p>젊은이의 거리 홍대를 일본어 가이드와 함께 즐길 수 있는 투어입니다.</p>
+
+                                <ul>
+                                    <li>지역 : Sapa, Sa Pa, Lào Cai, Việt Nam</li>
+                                    <li>시간 : <span>2019.12.25~2020.01.10</span></li>
+                                    <li>포함 내역 : Let's discovery Sapa with us!</li>
+                                </ul>
+                            </div>
+                            <div class="money">5,000원</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    <aside class="modal fade review_md" id="modal_review01" tabindex="-1">
+        <div class="modal_dialog modal_center">
+            <div class="modal_content" id="modal_content">
+                <div class="md_head center">
+                    <h5 class="modal_title">Review</h5>
+                    <button class="btn_close btn " dismiss="modal"></button>
+                </div>
+                <div class="md_body">
+                    <div class="info_con">
+                        <p>Reviews are public and editable. Past edits are visible to the developer and
+                            users unless you delete your review altogether.</p>
+                    </div>
+                    <div class="body_area">
+                        <textarea class="fullcontrol"></textarea>
+                    </div>
+                    <div class="box_rate">
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5" title="text"></label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text"></label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text"></label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text"></label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="md_footer">
+                    <!-- <button type="button" class="btn btn_close" dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn_action">확인</button>
+                    <!-- <button type="button" class="btn btn_action">Action</button> -->
+                </div>
+            </div>
+        </div>
+    </aside>
+    <footer class="mb_dev main_footer">
+        <div class="footer_top">
+            <div class="info_box_footer">
+                <ul class="menu_footer">
+                    <li><a href="detail.html">정보 처리 방침</a></li>
+                    <li><a href="detail.html">회사소개</a></li>
+                    <li><a href="detail.html">이용약관</a></li>
+                </ul>
+                <ul class="info_bot">
+                    <li> ㈜고투어여행사</li>
+                    <li>주소 : (100-864) 서울특별시 중구 태평로2가 69-15 </li>
+                    <li>덕재빌딩 502호</li>
+                    <li>Tel: 02-777-0442 | Fax: 02-777-0443</li>
+                    <li>고객상담번호 : 070-7430-8463 (평일/주말 09:00~18:00) </li>
+                    <li>개인정보관리책임자 : 박성환</li>
+                    <li>관광사업자등록 : 일반여행업 제23호</li>
+                    <li>사업자등록번호 : 104-86-43305</li>
+                    <li>통신 판매업신고번호 : 서울중구 제0003호</li>
+                    <li>이메일: gotour77@naver.com</li>
+                </ul>
+            </div>
+            <div class="box_social">
+                <ul>
+                    <li class="fb"><a href="detail.html">facebook</a></li>
+                    <li class="tw"><a href="detail.html">twicter</a></li>
+                    <li class="bulet"><a href="detail.html">bullet</a></li>
+                    <li class="line"><a href="detail.html">line</a></li>
+                    <!-- <li class="naver"><a href="detail.html">naver</a></li>
+                    <li class="instagram"><a href="detail.html">instagram</a></li>
+                    <li class="youtube"><a href="detail.html">youtube</a></li>
+                    <li class="kakao"><a href="detail.html">kakao</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bot">
+            <p></p>© 2020 Gotourticket.com
+        </div>
+
+    </footer><!-- main_footer -->
+    <!-- jQuery -->
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/slick.js"></script>
+    <script src="https://swiperjs.com/package/js/swiper.min.js"></script>
+    <script src="public/js/mquery.js"></script>
+    <script src="public/js/uiMain.js"></script>
+    <!-- Initialize Swiper -->
+
+</body>
+
+</html>
