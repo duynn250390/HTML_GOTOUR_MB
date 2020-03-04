@@ -4,4 +4,4 @@ layout
 package-lock.json
 package.json
 gulpfile.js
-public/css/*.scss
+# public/css/*.scss

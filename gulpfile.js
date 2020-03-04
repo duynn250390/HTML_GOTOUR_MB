@@ -4,7 +4,11 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     minifyCss = require('gulp-cssnano'),
     browserSync = require('browser-sync'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
+    beautify = require('gulp-beautify'),
+    prettyHtml = require('gulp-pretty-html'),
     fileinclude = require('gulp-file-include');
 
 // // compile task
@@ -16,10 +20,17 @@ var gulp = require('gulp'),
 gulp.sources = {
     build: './build',
     layout: './layout',
-    public: './public'
+    public: './public',
+    dist: './dist'
 };
 
-
+// compile JS
+gulp.task('js', function () {
+    gulp.src(gulp.sources.build + '/js/*.js')
+        .pipe(gulpif(uglify(), beautify()))
+        .pipe(gulp.dest(gulp.sources.dist + '/public/js'))
+        .pipe(browserSync.stream());
+});
 // compile task
 gulp.task('sass', function () {
     gulp.src(gulp.sources.build + '/scss/**/*.scss')
@@ -28,7 +39,7 @@ gulp.task('sass', function () {
         .pipe(minifyCss())
         .pipe(rename('style.css'))
         .on('error', swallowError)
-        .pipe(gulp.dest('public/css'))
+        .pipe(gulp.dest(gulp.sources.dist + '/public/css'))
         // .pipe(gulp.dest(function (f) {
         //     return f.base;
         // }))
@@ -50,7 +61,8 @@ gulp.task('fileinclude', () => {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(gulp.dest('./'))
+        .pipe(prettyHtml())
+        .pipe(gulp.dest(gulp.sources.dist))
         .pipe(browserSync.stream());
 });
 
@@ -67,9 +79,10 @@ gulp.task('browser-sync', function () {
 
 // watch for changes in html, css, scss
 gulp.task('default', ['browser-sync'], function () {
-    gulp.watch(gulp.sources.layout + '/*.html', ['fileinclude']);
+    gulp.watch(gulp.sources.build + '/*.html', ['fileinclude']);
     gulp.watch(gulp.sources.build + '/scss/*.scss', ['sass']);
-    gulp.watch('/*.html', ['fileinclude']);
+    // gulp.watch('/*.html', ['fileinclude']);
+    gulp.watch(gulp.sources.build + '/js/*.js', ['js']);
     gulp.watch('*.html')
         .on('change', browserSync.reload);
 })
