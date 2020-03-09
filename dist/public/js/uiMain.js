@@ -40,7 +40,15 @@ $(document).ready(function() {
         $(this).addClass('on');
 
     });
+
     if ($('.item_warap').length > 0) {
+        // if ($('.item_warap').height() > 300) {
+        //     $('.item_warap').css({
+        //         'height': '200px',
+        //         'overflow': 'hidden'
+        //     });
+        //     $('.show_hang').addClass('on');
+        // }
         $(document).on('click', '.item_list', function() {
             var data_tabs = $(this).attr('data-tabs');
             $('.item_list').removeClass('on');
