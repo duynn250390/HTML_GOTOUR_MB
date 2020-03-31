@@ -624,6 +624,7 @@ $(document).scroll(function() {
     }
 });
 // -----------------SHOW MENU-----------------
+
 $(document).on('click', '#menu_slide', function(e) {
     $('body').addClass('active_menu');
     $('.menu_mb').css({
@@ -681,8 +682,8 @@ $(document).on('click', '.item_QA ', function(e) {
 });
 
 // ===================TABS FQA=================
-$(document).on('click', '.controlTabs_fqa .item_tabs', function(e) {
-    $('.controlTabs_fqa .item_tabs').removeClass('on');
+$(document).on('click', '.centerService .item_tabs', function(e) {
+    $('.centerService .item_tabs').removeClass('on');
     $('.tabsintem ').removeClass('on');
     $(this).addClass('on');
     var data_tabs = $(this).attr('data-tabs');
@@ -791,4 +792,32 @@ $(document).ready(function() {
         document.title = get;
     }
 
+});
+
+function open_modal(data_target) {
+    $('#' + data_target).show(100);
+    $('#' + data_target).addClass('open');
+    $('body').addClass('active_menu');
+    $("body").append("<div class='ovelay_modal fade open' id='ovelay_modal'></div>");
+}
+$(document).on('click', '#send_one_one', function(e) {
+    var data_target = $(this).attr('data-target');
+    open_modal(data_target);
+});
+$(document).on('click', '.btn.close', function(e) {
+    $('.modal').removeClass('open');
+    $('body').removeClass('active_menu');
+    $('.ovelay_modal').remove();
+    setTimeout(function() {
+        $('.modal').css({
+            'display': 'none'
+        });
+    }, 200);
+});
+$(document).on('click', '.box_sum_ques_ans .box_ques', function(e) {
+    $(this).parent().addClass('dropdown');
+});
+$(document).on('click', '.box_sum_ques_ans.dropdown', function(e) {
+    console.log('321');
+    $(this).removeClass('dropdown');
 });

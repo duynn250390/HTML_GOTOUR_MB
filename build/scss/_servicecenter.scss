@@ -1,0 +1,30 @@
+.centerService {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .item_tabs {
+        position: relative;
+        color:#3F65AE;
+        font-size: px2em(16);
+        font-weight: 600;
+        ::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            height: 0px;
+            width: 80%;
+            left: 10%;
+            background-color: #F7444E;
+            @include tran_slow_03();
+        }
+
+        &.on {
+            ::before {
+                height: 3px;
+            }
+        }
+
+    }
+}

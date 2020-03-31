@@ -61,7 +61,8 @@
             <section class="box_box">
                 <div class="heading_title">가격정보
                     <div class="box_btn_right">
-                        <a href="">가격상세보기</a>
+                        <button class="btn btn_more_ticket open_modal" data-open="model"
+                            data-target="modal_titket">가격상세보기</button>
                     </div>
                 </div>
                 <h5 class="tit_detail_sub">기본가견</h5>
@@ -145,9 +146,9 @@
                         <div class="bot_name">남겨주세요.</div>
                     </li>
                 </ul>
-                <div class="go_list">
+                <!-- <div class="go_list">
                     <a href="">빅톤</a>
-                </div>
+                </div> -->
             </section>
             <section class="box_box">
                 <div class="heading_title ">예매 공지사항</div>
@@ -195,12 +196,12 @@
                             <div class="tit">
                                 <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
                                 <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
+
                             </div>
                         </div>
                         <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
+                            <button class="btn_op btn_like on">12</button>
+                            <button class="btn_op btn_don_like">5</button>
                         </div>
                     </div>
                     <div class="show show_comment" id="show_comment">
@@ -209,128 +210,169 @@
                 </div>
                 <ul class="list_comment_qa list_cmqa" id="list_comment_qa">
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_a.png" alt="">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="rating_detail">
+                                <ul class="star_review">
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
                             </div>
                         </div>
-                        <div class="rating_detail">
-                            <ul class="star_review">
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            <a href="" class="btn_reply">답글 0</a>
+                        <div class="box_lv box_lv1">
+                            <div class="box_col_ques">
+                                <div class="ques">
+                                    <div class="thumb_avatar">
+                                        <img src="public/images/hot_news/thumbs_b.png" alt="">
+                                    </div>
+                                    <div class="tit">
+                                        <span class="name">정으닐</span>
+
+                                        <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                    </div>
+                                </div>
+                                <div class="rating_detail">
+                                    <ul class="star_review">
+                                        <li class="active"></li>
+                                        <li class="active"></li>
+                                        <li class="active"></li>
+                                        <li class="active"></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="opt">
+                                    <button class="btn_op btn_like on">12</button>
+                                    <button class="btn_op btn_don_like">5</button>
+                                </div>
+                            </div>
+                            <div class="box_col_ques">
+                                <div class="ques">
+                                    <div class="thumb_avatar">
+                                        <img src="public/images/hot_news/thumbs_b.png" alt="">
+                                    </div>
+                                    <div class="tit">
+                                        <span class="name">정으닐</span>
+
+                                        <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                    </div>
+                                </div>
+                                <div class="rating_detail">
+                                    <ul class="star_review">
+                                        <li class="active"></li>
+                                        <li class="active"></li>
+                                        <li class="active"></li>
+                                        <li class="active"></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="opt">
+                                    <button class="btn_op btn_like on">12</button>
+                                    <button class="btn_op btn_don_like">5</button>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_c.png" alt="">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="rating_detail">
-                            <ul class="star_review">
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            <a href="" class="btn_reply">답글 0</a>
+                            <div class="rating_detail">
+                                <ul class="star_review">
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_d.png" alt="">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="rating_detail">
-                            <ul class="star_review">
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            <a href="" class="btn_reply">답글 0</a>
+                            <div class="rating_detail">
+                                <ul class="star_review">
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_e.png" alt="">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="rating_detail">
-                            <ul class="star_review">
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            <a href="" class="btn_reply">답글 0</a>
-                        </div>
-                    </li>
-                    <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                            <div class="rating_detail">
+                                <ul class="star_review">
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li class="active"></li>
+                                    <li></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="rating_detail">
-                            <ul class="star_review">
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li class="active"></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            <a href="" class="btn_reply">답글 0</a>
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -338,7 +380,7 @@
                     <span></span>
                 </div>
             </section>
-            <div clas="show_hang">Show hàng</div>
+
         </aside>
         <aside class="item_warap " id="item___warrap_3">
             <section class="section__001">
@@ -362,12 +404,12 @@
                             <div class="tit">
                                 <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
                                 <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
+
                             </div>
                         </div>
                         <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
+                            <button class="btn_op btn_like on">12</button>
+                            <button class="btn_op btn_don_like">5</button>
                         </div>
                     </div>
                     <div class="show show_comment" id="show_comment">
@@ -376,83 +418,130 @@
                 </div>
                 <ul class="list_comment_qa list_cmqa" id="list_comment_qa">
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_c.png">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
+                            </div>
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
                             </div>
                         </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            
+                        <div class="box_lv box_lv1">
+                            <div class="box_col_ques">
+                                <div class="ques">
+                                    <div class="thumb_avatar">
+                                        <img src="public/images/hot_news/thumbs_c.png">
+                                    </div>
+                                    <div class="tit">
+                                        <span class="name">정으닐</span>
+                                        <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                    </div>
+                                </div>
+                                <div class="opt">
+                                    <button class="btn_op btn_like on">12</button>
+                                    <button class="btn_op btn_don_like">5</button>
+                                </div>
+                            </div>
+                            <div class="box_col_ques">
+                                <div class="ques">
+                                    <div class="thumb_avatar">
+                                        <img src="public/images/hot_news/thumbs_d.png">
+                                    </div>
+                                    <div class="tit">
+                                        <span class="name">정으닐</span>
+                                        <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                    </div>
+                                </div>
+                                <div class="opt">
+                                    <button class="btn_op btn_like on">12</button>
+                                    <button class="btn_op btn_don_like">5</button>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_c.png">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_c.png">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_c.png">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                     <li class="comment_item">
-                        <div class="ques">
-                            <div class="tit">
-                                <span class="ico">Q</span>
-                                <span class="name">정으닐</span>
-                                <span class="day">2019.11.11</span>
-                                <span class="btn"><a href="">신고</a></span>
-                                <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                        <div class="box_lv box_lv0">
+                            <div class="ques">
+                                <div class="thumb_avatar">
+                                    <img src="public/images/hot_news/thumbs_c.png">
+                                </div>
+                                <div class="tit">
+                                    <span class="name">정으닐</span>
+                                    <p class="txt">내일 예매 입금방법 뭘로 하는게 좋을까요..ㅜㅜ 처음이라</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="opt">
-                            <button class="btn_like on">12</button>
-                            <button class="btn_don_like">5</button>
-                            
+                            <div class="opt">
+                                <button class="btn_op btn_like on">12</button>
+                                <button class="btn_op btn_don_like">5</button>
+                                <button class="btn btn_reply open_modal" data-open="model" data-target="modal_reply">답글
+                                    0</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -460,7 +549,7 @@
                     <span></span>
                 </div>
             </section>
-            <div clas="show_hang">Show hàng</div>
+
         </aside>
         <aside class="item_warap" id="item___warrap_4">
             <div class="box_view_warap">
@@ -487,7 +576,7 @@
                     <img src="public/images/hot_news/maps.png">
                 </div>
             </div>
-            <div clas="show_hang">Show hàng</div>
+
         </aside>
         <aside class="item_warap " id="item___warrap_5">
             <section class="box_box">
@@ -582,7 +671,7 @@
                     </div>
                 </div>
             </section>
-            <div clas="show_hang">Show hàng</div>
+
         </aside>
         <div class="booking">
             <div class="btn_booking">
@@ -671,6 +760,74 @@
                     <!-- <button type="button" class="btn btn_close" dismiss="modal">Close</button> -->
                     <button type="button" class="btn btn_action">확인</button>
                     <!-- <button type="button" class="btn btn_action">Action</button> -->
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside class="modal fade reply_md" id="modal_reply" tabindex="-1">
+        <div class="modal_dialog modal_center">
+            <div class="modal_content" id="modal_content">
+                <div class="md_head left">
+                    <h5 class="modal_title">Review</h5>
+                    <button class="btn_close btn " dismiss="modal"></button>
+                </div>
+                <div class="md_body">
+                    <div class="body_area">
+                        <textarea class="fullcontrol"></textarea>
+                        <span class="txt_limit">1/1000</span>
+                    </div>
+                </div>
+                <div class="md_footer">
+                    <!-- <button type="button" class="btn btn_close" dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn_action">SUBMIT</button>
+                    <!-- <button type="button" class="btn btn_action">Action</button> -->
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside class="modal fade viewtitket_md" id="modal_titket" tabindex="-1">
+        <div class="modal_dialog modal_center">
+            <div class="modal_content" id="modal_content">
+                <div class="md_head left">
+                    <h5 class="modal_title">가격상세보기</h5>
+                    <button class="btn_close btn " dismiss="modal"></button>
+                </div>
+                <div class="md_body">
+                    <div class="body_area">
+                        <div class="box_list_heading">VIP석</div>
+                        <div class="box_list_item">
+                            <div class="item_list">
+                                <div class="boxtitle">가격상세보기</div>
+                                <div class="boxtitle price">150,000원</div>
+                            </div>
+                        </div>
+                        <div class="box_list_heading">R석</div>
+                        <div class="box_list_item">
+                            <div class="item_list">
+                                <div class="boxtitle">학생할인(초,중,고/본인만) (20%할인)</div>
+                                <div class="boxtitle price">150,000원</div>
+                            </div>
+                            <div class="item_list">
+                                <div class="boxtitle">가격상세보기</div>
+                                <div class="boxtitle price">150,000원</div>
+                            </div>
+                        </div>
+                        <div class="box_list_heading">M석</div>
+                        <div class="box_list_item">
+                            <div class="item_list">
+                                <div class="boxtitle">가격상세보기</div>
+                                <div class="boxtitle price">150,000원</div>
+                            </div>
+                            <div class="item_list">
+                                <div class="boxtitle">학생할인(초,중,고/본인만) (20%할인)</div>
+                                <div class="boxtitle price">150,000원</div>
+                            </div>
+                            <div class="item_list">
+                                <div class="boxtitle">학생할인(초,중,고/본인만) (20%할인)</div>
+                                <div class="boxtitle price">150,000원</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

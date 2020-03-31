@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go Tour Home Page</title>
+
+    <!-- MyStyle CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- require js loading -->
+</head>
+
+<body>
+    <header class="mb_dev main_headers">
+        <div class="global_header">
+            <div class="main_logo">
+                <div class="txt_menu">Reviews</div>
+            </div>
+            <div class="control_menu_back">
+                <div class="go_back hideText">Go Back</div>
+                <div class="menu_slide show_menu hideText" id="menu_slide">Menu</div>
+            </div>
+            <div class="search_slide hideText" id="search_action">검색열기</div>
+        </div>
+    </header>
+    <aside class="menu_mb">
+        <div class="mn_top">
+            <a href="home.html" class="icon_home hideText">Home</a>
+            <a href="" class="icon_seting hideText">Seting</a>
+            <div class="acount">
+                <div class="thumb">
+                    <a href="home.html">
+                        <span class="img_acount" style="background-image: none;"></span>
+                    </a>
+                </div>
+                <div class="info_acount">
+                    <div class="n1">로그인을 해주세요</div>
+                    <div class="n2">예매확인</div>
+                </div>
+            </div>
+        </div>
+        <div class="mn_body">
+            <nav class="main_menu">
+                <ul class="menu ">
+                    <li class="menu_list on"><a href="list_item_category.html" class="menu_item" data-category="KPOP/콘서트" data-active-menu='KPOP/콘서트'>KPOP/콘서트</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="공연/뮤지컬" data-active-menu='공연/뮤지컬'>공연/뮤지컬</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="전시/행사" data-active-menu='전시/행사'>전시/행사</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="현지투어/체험" data-active-menu='현지투어/체험'>현지투어/체험</a></li>
+                    <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="팬미팅/이벤트" data-active-menu='팬미팅/이벤트'>팬미팅/이벤트</a></li>
+                </ul>
+                <ul class="menu">
+                    <li class="menu_list"><a href="contact_list_01.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
+                    </li>
+                    <li class="menu_list"><a href="review_list.html" class="menu_item" data-active-menu='랭킹'>랭킹</a></li>
+                    <li class="menu_list"><a href="info_hallyo.html" class="menu_item" data-active-menu='한류정'>한류정</a></li>
+                    <li class="menu_list"><a href="notice.html" class="menu_item" data-active-menu='공지사'>공지사</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <aside class="search_box">
+        <div class="main_search">
+            <div class="group_search">
+                <div class="main_input">
+                    <input type="text" placeholder="Search..." class="control_input">
+                    <button class="btn_search hideText">dsd</button>
+                </div>
+            </div>
+            <div class="auto_tag_complate">
+                <ul class="sum_tags_search">
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">최신음악</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">멜론차트</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                    <li class="item_tag">
+                        <a href="" class="tag">티켓</a>
+                        <span class="remove_tag"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
+        <section class="rating_box_main main_box">
+            <div class="box_head_review">
+                <div class="sum_point">
+                    <span class="start_point">4.5</span>
+                    <span class="txts">Average Rating</span>
+                </div>
+                <div class="box_detail_star">
+                    <ul>
+                        <li>
+                            <div>5 Star</div>
+                            <div class="procces_star">
+                                <div class="mybar" style="width:90%"></div>
+                            </div>
+                            <div class="strong">4 Rating</div>
+                        </li>
+                        <li>
+                            <div>4 Star</div>
+                            <div class="procces_star">
+                                <div class="mybar" style="width:40%"></div>
+                            </div>
+                            <div class="strong">4 Rating</div>
+                        </li>
+                        <li>
+                            <div>3 Star</div>
+                            <div class="procces_star">
+                                <div class="mybar" style="width:90%"></div>
+                            </div>
+                            <div class="strong">4 Rating</div>
+                        </li>
+                        <li>
+                            <div>2 Star</div>
+                            <div class="procces_star">
+                                <div class="mybar" style="width:60%"></div>
+                            </div>
+                            <div class="strong">4 Rating</div>
+                        </li>
+                        <li>
+                            <div>1 Star</div>
+                            <div class="procces_star">
+                                <div class="mybar" style="width:10%"></div>
+                            </div>
+                            <div class="strong">4 Rating</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_review_list">
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+                <article class="warap">
+                    <figure class="box_thumb">
+                        <a href="">
+                            <img src="public/images/share/img_comment.png" alt="img comment">
+                        </a>
+                    </figure>
+                    <div class="box_destion_reviews">
+                        <h4 class="heading_title"><a href="">EXPLORE EVERLAND PARK - Enjoy DRUM EXPLORE EVERLAND PARK -
+                                Enjoy DRUM</a></h4>
+                        <ul class="star_review">
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
+                        <p class="info_reiview">
+                            <a href="">
+                                처음 이곳에서 티켓을 대행 받았습니다 만, 제대로 연락도 주셔서 정말 안심할 수있었습니다. 또한 좌석도 매우 만족하고 있습니다. 이번에는
+                                감사합니다. 또기회가 있으면 잘 부탁드립니다!</a>
+                        </p>
+                    </div>
+                </article><!-- warap -->
+            </div>
+        </section>
+    </aside>
+    <footer class="mb_dev main_footer">
+        <div class="footer_top">
+            <div class="info_box_footer">
+                <ul class="menu_footer">
+                    <li><a href="detail.html">회사소개</a></li>
+                    <li><a href="detail.html">개인정보처리방침</a></li>
+                    <li><a href="detail.html">이용약관</a></li>
+                    <li><a href="detail.html">예매가이드</a></li>
+                    <li><a href="detail.html">공연등록문의</a></li>
+                </ul>
+                <ul class="info_bot">
+                    <li>(주)고투어여행사</li>
+                    <li>서울시 중구 태평로2가 69-15 502</li>
+                    <li>사업자등록번호 104-86-43305</li>
+                    <li>통신판매업신고 서울중구 제0003호</li>
+                    <li>고객센터: 02-777-0442</li>
+                </ul>
+            </div>
+            <div class="box_social">
+                <ul>
+                    <li class="fb"><a href="detail.html">facebook</a></li>
+                    <li class="tw"><a href="detail.html">twicter</a></li>
+                    <li class="bulet"><a href="detail.html">bullet</a></li>
+                    <li class="line"><a href="detail.html">line</a></li>
+                    <!-- <li class="naver"><a href="detail.html">naver</a></li>
+                    <li class="instagram"><a href="detail.html">instagram</a></li>
+                    <li class="youtube"><a href="detail.html">youtube</a></li>
+                    <li class="kakao"><a href="detail.html">kakao</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bot">
+            <div>©2020 Gotourticket.com</div>
+        </div>
+
+    </footer><!-- main_footer -->
+    <!-- jQuery -->
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/slick.js"></script>
+    <script src="https://swiperjs.com/package/js/swiper.min.js"></script>
+    <script src="public/js/mquery.js"></script>
+    <script src="public/js/uiMain.js"></script>
+    <!-- Initialize Swiper -->
+
+</body>
+
+</html>

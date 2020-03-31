@@ -1,0 +1,89 @@
+.result_search {
+    .title_search {
+        color: #686868;
+    }
+
+    .lists_key {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .item_key {
+            margin-right: 5px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .key_sugge {
+                padding: 5px 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #E4E4E4;
+                text-decoration: none;
+                outline: none;
+                color: #686868;
+
+                .num_key {
+                    margin-left: 5px;
+                    color: #fff;
+                    background-color: #3F65AE;
+                    font-size: px2em(10);
+                    padding: 2px 6px;
+                    @include borderRadius(6px);
+                }
+            }
+        }
+    }
+}
+
+.box_list_result {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    .item_result {
+        border-bottom: 1px solid #e4e4e4;
+        padding: 5px 0;
+
+        .warap_result {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            outline: none;
+
+            .thumb_result {
+                width: 60px;
+                height: 60px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                }
+            }
+
+            .content_resurl {
+                @include calc(width, '100% - 60px');
+                padding-left: 10px;
+
+                .title {
+                    font-size: px2em(16);
+                    line-height: 20px;
+                    font-weight: 600;
+                    color: #4B4B4B;
+                    margin-bottom: 10px;
+                    @include multiline(16, 1.4, 1);
+                    
+                }
+                .descript {
+                    font-size: px2em(13);
+                    color: #4B4B4B;
+                    // @include truncate(13,18, 2);
+                }
+            }
+        }
+    }
+}

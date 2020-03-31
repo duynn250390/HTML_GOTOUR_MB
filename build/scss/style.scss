@@ -2,6 +2,9 @@
 @import 'base';
 @import 'font';
 @import 'animation';
+@import 'common';
+@import 'button';
+@import 'modal';
 @import 'slick';
 @import 'home';
 @import 'detail';
@@ -15,6 +18,15 @@
 @import 'voucher';
 @import 'wishlist';
 @import 'updatecss';
+@import 'profile';
+@import 'rating';
+@import 'reservation';
+@import 'result_search';
+@import 'notification';
+@import 'list_booking';
+@import 'notice';
+@import 'servicecenter';
 
 @import 'respontive';
 @import 'fix_IE';
+@import 'fix_IOS';

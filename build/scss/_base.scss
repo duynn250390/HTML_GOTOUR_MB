@@ -845,3 +845,43 @@ input[type=range]:focus::-ms-fill-upper {
         margin-top: 0.2em;
     }
 }
+
+@mixin truncate($font-size, $line-height, $lines-to-show) {
+    display: block; // Fallback for non-webkit
+    display: -webkit-box;
+    // height: ($font-size*$line-height*$lines-to-show) + px; // Fallback for non-webkit
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+$font-size: 14px;
+$line-height: 1.3;
+
+@for $i from 1 through 4 {
+    .multiline_#{$i} {
+        display: block;
+        display: -webkit-box;
+        height: $font-size*$line-height*$i;
+        -webkit-line-clamp: $i;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+// @include multiline(14, 1.3, 2);
+@mixin multiline($font_size, $line_height, $num_line) {
+    display: block;
+    display: -webkit-box;
+    line-height: $line_height;
+    font-size: px2em($font_size);
+    height: ($font_size*$line_height*$num_line) + px;
+    -webkit-line-clamp: $num_line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

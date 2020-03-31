@@ -32,7 +32,7 @@ gulp.task('js', function () {
         .pipe(browserSync.stream());
 });
 // compile task
-gulp.task('sass', function () {
+gulp.task('scss', function () {
     gulp.src(gulp.sources.build + '/scss/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer())
@@ -89,7 +89,7 @@ gulp.task('browser-sync', function () {
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch(gulp.sources.build + '/*.html', ['fileinclude']);
     gulp.watch(gulp.sources.layout + '/*.html', ['tem_fileinclude','fileinclude']);
-    gulp.watch(gulp.sources.build + '/scss/*.scss', ['sass']);
+    gulp.watch(gulp.sources.build + '/scss/*.scss', ['scss']);
     // gulp.watch('/*.html', ['fileinclude']);
     gulp.watch(gulp.sources.build + '/js/*.js', ['js']);
     gulp.watch('*.html')

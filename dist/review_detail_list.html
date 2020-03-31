@@ -109,13 +109,17 @@
         <div class="main_review">
             <div class="detail_review">
                 <div class="coldt">
-                    <div class="thumb box_left">
+                    <div class="thumb box_left thumb">
                         <img class="img" src="public/images/hot_news/thumbs_b.png">
                     </div>
                     <div class="box_right pd_date">
-                        <div class="top">찬란하게 빛나는 영웅들의 이야기</div>
+                        <!-- <div class="top">찬란하게 빛나는 영웅들의 이야기</div> -->
                         <div class="title">찬란하게 빛나는 영웅</div>
-                        <span class="date"><span>작성일자 :</span>2/2/2020</span>
+                        <!-- <span class="date"><span>작성일자 :</span>2/2/2020</span> -->
+                        <div class="list_action">
+                            <button class="btn btn_none edit"><span></span>Edit</button>
+                            <button class="btn btn_none delete open_modal" data-open="model" data-target="md_delete_review"><span></span>Delete</button>
+                        </div>
                     </div>
                 </div>
                 <div class="coldt">
@@ -149,25 +153,40 @@
             </div>
         </div>
     </aside>
+
+    <aside class="modal fade deleteitem_md" id="md_delete_review" tabindex="-1">
+        <div class="modal_dialog modal_center">
+            <div class="modal_content" id="modal_content">
+                <div class="md_head center">
+                    <h5 class="modal_title">Delete this item</h5>
+                    <button class="btn_close btn " dismiss="modal"></button>
+                </div>
+                <div class="md_body">
+                    <div class="content">Are you sure you want to delete this item?</div>
+                </div>
+                <div class="md_footer">
+                    <button type="button" class="btn btn_light close">Cancel</button>
+                    <button type="button" class="btn btn_sussec">Delete</button>
+                </div>
+            </div>
+        </div>
+    </aside>
     <footer class="mb_dev main_footer">
         <div class="footer_top">
             <div class="info_box_footer">
                 <ul class="menu_footer">
-                    <li><a href="detail.html">정보 처리 방침</a></li>
                     <li><a href="detail.html">회사소개</a></li>
+                    <li><a href="detail.html">개인정보처리방침</a></li>
                     <li><a href="detail.html">이용약관</a></li>
+                    <li><a href="detail.html">예매가이드</a></li>
+                    <li><a href="detail.html">공연등록문의</a></li>
                 </ul>
                 <ul class="info_bot">
-                    <li> ㈜고투어여행사</li>
-                    <li>주소 : (100-864) 서울특별시 중구 태평로2가 69-15 </li>
-                    <li>덕재빌딩 502호</li>
-                    <li>Tel: 02-777-0442 | Fax: 02-777-0443</li>
-                    <li>고객상담번호 : 070-7430-8463 (평일/주말 09:00~18:00) </li>
-                    <li>개인정보관리책임자 : 박성환</li>
-                    <li>관광사업자등록 : 일반여행업 제23호</li>
-                    <li>사업자등록번호 : 104-86-43305</li>
-                    <li>통신 판매업신고번호 : 서울중구 제0003호</li>
-                    <li>이메일: gotour77@naver.com</li>
+                    <li>(주)고투어여행사</li>
+                    <li>서울시 중구 태평로2가 69-15 502</li>
+                    <li>사업자등록번호 104-86-43305</li>
+                    <li>통신판매업신고 서울중구 제0003호</li>
+                    <li>고객센터: 02-777-0442</li>
                 </ul>
             </div>
             <div class="box_social">

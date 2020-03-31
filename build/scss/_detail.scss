@@ -70,7 +70,7 @@
     }
 
 
-    .box_sli{
+    .box_sli {
         display: flex;
         flex-direction: row;
         padding: 2em 0;
@@ -271,4 +271,46 @@
     @include maxWidth(480px) {
         margin-top: 0;
     }
+}
+
+.comment_item {
+    display: flex;
+    flex-direction: column;
+
+    .box_lv {
+        padding: 5px 0;
+        position: relative;
+        margin-bottom: 20px;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            @include calc(width, '100% - 20px');
+            height: 1px;
+            right: 0;
+            bottom: -10px;
+            background: #e4e4e4;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            &::after {
+                content: none;
+            }
+        }
+
+        &.box_lv0 {}
+
+        &.box_lv1 {
+            padding-left: 20px;
+            .box_col_ques{
+                padding: 10px 0;
+                border-bottom: 1px solid #e4e4e4;
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
 }

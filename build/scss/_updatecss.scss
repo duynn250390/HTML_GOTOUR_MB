@@ -900,14 +900,18 @@
                 .top_title {
                     font-size: px2em(20);
                     color: #3F65AE;
-                    @include break_word(1, 33);
+                    // @include break_word(1, 33);
                     margin-bottom: 5px;
+                    @include calc(width, '100% - 10px');
+                    text-align: center;
                 }
 
                 .bot_title {
                     font-size: px2em(16);
                     color: #4B4B4B;
-                    @include break_word(1, 26);
+                    // @include break_word(1, 26);
+                    @include calc(width, '100% - 10px');
+                    text-align: center;
                 }
 
                 .info_day {
@@ -938,11 +942,13 @@
     cursor: pointer;
     width: 100%;
     margin: 0 auto;
-    &.booktour{
-        margin-top:2em;
+
+    &.booktour {
+        margin-top: 2em;
         margin-bottom: 1em;
         width: calc(100% - 20px);
     }
+
     .box___more_item {
 
         display: flex;
@@ -1546,59 +1552,60 @@
 .dy_wrap_detail {
     margin-top: 20px;
     margin-bottom: 20px;
-    ;
 
-    .dy_wrap_detail_tabs {
-        position: relative;
-        overflow: hidden;
-        height: 51px;
+    .dy_wrap_detail_tabs {}
+}
+
+.dy_wrap_detail_tabs {
+    position: relative;
+    overflow: hidden;
+    height: 51px;
+    background: #fff;
+
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+
+    .list_detail {
+        width: 100%;
+        position: absolute;
+        height: 40px;
+        white-space: nowrap;
         background: #fff;
+        top: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow-x: auto;
 
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-text-size-adjust: none;
-        -moz-text-size-adjust: none;
-        -ms-text-size-adjust: none;
-        -o-text-size-adjust: none;
-        text-size-adjust: none;
-
-        .list_detail {
-            width: 100%;
-            position: absolute;
+        .item_list {
             height: 40px;
-            white-space: nowrap;
-            background: #fff;
-            top: 6px;
+            display: inline-block;
+            min-width: 124px;
+            text-align: center;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            overflow-x: auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: px2em(18);
+            line-height: 19px;
+            color: #8D8D8D;
+            cursor: pointer;
 
-            .item_list {
-                height: 40px;
-                display: inline-block;
-                min-width: 124px;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                font-size: px2em(18);
-                line-height: 19px;
-                color: #8D8D8D;
-                cursor: pointer;
-
-                &.on {
-                    color: #3F65AE;
-                }
+            &.on {
+                color: #3F65AE;
             }
         }
     }
@@ -1657,8 +1664,6 @@
 }
 
 .list_comment_qa {
-
-    // @include tran_slow_03();
     &.list_cmqa {
         max-height: 0;
         overflow-y: hidden;
@@ -1681,8 +1686,27 @@
         }
 
         .ques {
+            display: flex;
+            flex-direction: row;
+
+            .thumb_avatar {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                @include borderRadius(100%);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                }
+            }
+
             .tit {
+                @include calc(width, '100% - 40px');
                 position: relative;
+                padding-left: 5px;
 
                 .ico {
                     display: inline-block;
@@ -1737,6 +1761,11 @@
             }
         }
 
+        .opt,
+        .rating_detail {
+            padding-left: 40px;
+        }
+
         .opt {
             margin-top: 10px;
 
@@ -1744,7 +1773,7 @@
                 @include clear_fix();
             }
 
-            button {
+            .btn_op {
                 float: left;
                 position: relative;
                 height: 21px;
@@ -1768,48 +1797,51 @@
                     -webkit-background-size: 40px auto;
                     text-indent: -9999px;
                 }
-            }
 
-            .btn_like {
-                -webkit-appearance: button;
-                border-radius: 0;
-                outline: none;
-
-                &::before {
-                    content: '';
-                    background: url('../images/icon/btn_like.png') no-repeat;
-                }
-
-                color:#4B4B4B;
-                font-size: px2em(14);
-
-                &.on {
-                    color: #3F65AE;
+                &.btn_like {
+                    -webkit-appearance: button;
+                    border-radius: 0;
+                    outline: none;
 
                     &::before {
                         content: '';
-                        background: url('../images/icon/btn_like_on.png') no-repeat;
+                        background: url('../images/icon/btn_like.png') no-repeat;
+                    }
+
+                    color:#4B4B4B;
+                    font-size: px2em(14);
+
+                    &.on {
+                        color: #3F65AE;
+
+                        &::before {
+                            content: '';
+                            background: url('../images/icon/btn_like_on.png') no-repeat;
+                        }
+                    }
+                }
+
+                &.btn_don_like {
+                    &::before {
+                        content: '';
+                        background: url('../images/icon/btn_dont_like.png.png') no-repeat;
                     }
                 }
             }
 
-            .btn_don_like {
-                &::before {
-                    content: '';
-                    background: url('../images/icon/btn_dont_like.png.png') no-repeat;
-                }
-            }
-            .btn_reply{
+            .btn_reply {
+
                 position: absolute;
                 right: 0;
-                bottom:0;
+                bottom: 0;
                 text-decoration: none;
                 outline: none;
-                padding:4px 10px;
+                padding: 4px 10px;
                 background: #78BCC4;
-                color:#fff;
+                color: #fff;
                 @include borderRadius(14px);
             }
+
         }
     }
 }
@@ -1908,9 +1940,10 @@
 
 .item_warap {
     display: none;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     position: relative;
-    .show_hang{
+
+    .show_hang {
         display: none;
         position: absolute;
         width: 100%;
@@ -1918,10 +1951,12 @@
         background: #ddd;
         left: 0;
         bottom: 0;
-        &.on{
+
+        &.on {
             display: block;
         }
     }
+
     &.on {
         display: block;
     }
@@ -2332,6 +2367,8 @@
 
     .item_star {
         margin-top: 5px;
+        display: flex;
+        flex-direction: row;
 
         .icon_sao {
             height: 19px;

@@ -1,0 +1,307 @@
+.main_my_dashboad {
+    .box_non_user,
+    .box_info,
+    .__item_dashboad {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .box_head {
+        min-height: 189px;
+        background: url(../images/icon/bg_profile.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        position: relative;
+        margin-bottom: 100px;
+
+        .edit {
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            right: 15px;
+            top: 15px;
+            background: url(../images/icon/icon_edit.svg);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .box_thum {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            bottom: -140px;
+
+            .thumb {
+                width: 90px;
+                height: 90px;
+                overflow: hidden;
+                @include borderRadius(50%);
+                position: relative;
+                // @include shadow_bottom();
+                border: 2px solid #fff;
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .name {
+                text-align: center;
+                font-size: px2em(18);
+                font-weight: 600;
+                color: #4B4B4B;
+            }
+
+            .nge {
+                text-align: center;
+                font-size: px2em(12);
+                color: #8D8D8D;
+            }
+        }
+    }
+
+    .box_info {
+        margin-bottom: 2em;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 1em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .nona {
+                    font-weight: 600;
+                    color: #4B4B4B;
+                    width: 100px;
+                }
+
+                .in {
+                    color: #8D8D8D;
+                }
+            }
+        }
+    }
+
+    .__item_dashboad {
+        margin-bottom: 2em;
+        display: flex;
+        flex-direction: row;
+
+        .item_dashboard {
+            border: 1px solid #e4e4e4;
+            width: calc((100% - 30px) / 4);
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.noad1 {
+                .main_item_dashboard {
+                    .item_db {
+                        .icon {
+                            background: url('../images/icon/db001.svg');
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+
+            &.noad2 {
+                .main_item_dashboard {
+                    .item_db {
+                        .icon {
+                            background: url('../images/icon/db002.svg');
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+
+            &.noad3 {
+                .main_item_dashboard {
+                    .item_db {
+                        .icon {
+                            background: url('../images/icon/db003.svg');
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+
+            &.noad4 {
+                .main_item_dashboard {
+                    .item_db {
+                        .icon {
+                            background: url('../images/icon/db004.svg');
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+
+            .main_item_dashboard {
+                text-decoration: none;
+                outline: none;
+
+                .item_db {
+                    min-height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .icon {
+                        height: 18px;
+                        width: 18px;
+                        display: block;
+
+                        margin-bottom: 1em;
+                    }
+
+                    .title {
+                        color: #4B4B4B;
+                        font-size: px2em(12);
+                    }
+
+                    .note {
+                        font-size: px2em(15);
+                        color: #F7444E;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box_non_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            position: relative;
+
+            .top {
+                width: 56px;
+                height: 56px;
+                @include borderRadius(100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .icon_ab {
+                    height: 14px;
+                    width: 14px;
+                    display: block;
+
+                    &.bell {
+                        background: url('../images/svg/icon_bell.svg');
+                        background-position: center;
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+
+                    &.like {
+                        background: url('../images/svg/icon_like.svg');
+                        background-position: center;
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+                .num {
+                    margin-top: 5px;
+                    font-size: px2em(18);
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+            }
+
+            &.like {
+                .top {
+                    background-color: #78BCC4;
+                }
+            }
+
+            &.bell {
+                .top {
+                    background-color: #3F65AE;
+                }
+            }
+
+            .title {
+                color: #707070;
+                font-size: px2em(12);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10%;
+                right: -15px;
+                width: 1px;
+                height: 80%;
+                display: block;
+                background-color: #E4E4E4;
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                &::before {
+                    content: none;
+                }
+            }
+
+
+        }
+    }
+}
+
+.main_my_dashboad {
+    .box_info {
+        border-top: 1px solid #e4e4e4;
+        padding-top: 20px;
+    }
+}

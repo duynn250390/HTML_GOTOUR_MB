@@ -1,0 +1,69 @@
+.box_notification {
+    display: flex;
+    flex-direction: column;
+
+    .box_item_noti {
+        margin-bottom: 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            @include calc(width, '100% - 40px');
+            height: 1px;
+            background: #e4e4e4;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+
+        .warap {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            outline: none;
+
+            .box_thumb {
+                width: 40px;
+                height: 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                }
+            }
+
+            .box_content {
+                @include calc(width, '100% - 40px');
+                padding-left: 5px;
+                position: relative;
+                .title {
+                    font-weight: 600;
+                    color: #4B4B4B;
+                    @include multiline(14, 1.3, 1);
+                    padding-right: 70px;
+                }
+                .time{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: px2em(12);
+                    color: #AEAEAE;
+                    max-width: 70px;
+                    
+                }
+                .des {
+                    margin-top: 5px;
+                    color: #4B4B4B;
+                    @include multiline(12, 1.3, 2);
+                }
+            }
+        }
+    }
+}

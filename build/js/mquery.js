@@ -625,6 +625,7 @@ $(document).scroll(function () {
     }
 });
 // -----------------SHOW MENU-----------------
+
 $(document).on('click', '#menu_slide', function (e) {
     $('body').addClass('active_menu');
     $('.menu_mb').css({
@@ -682,8 +683,8 @@ $(document).on('click', '.item_QA ', function (e) {
 });
 
 // ===================TABS FQA=================
-$(document).on('click', '.controlTabs_fqa .item_tabs', function (e) {
-    $('.controlTabs_fqa .item_tabs').removeClass('on');
+$(document).on('click', '.centerService .item_tabs', function (e) {
+    $('.centerService .item_tabs').removeClass('on');
     $('.tabsintem ').removeClass('on');
     $(this).addClass('on');
     var data_tabs = $(this).attr('data-tabs');
@@ -732,29 +733,29 @@ $(document).on('click', '.menu .menu_list .menu_item', function (e) {
 
 $(document).ready(function () {
     var getURL = $(location).attr('pathname').slice(1);
-    if(getURL == 'home.html'||getURL == 'review_list.html'||getURL == 'contact_list_01.html'||getURL == 'info_hallyo.html' || getURL == 'notice.html'){
+    if (getURL == 'home.html' || getURL == 'review_list.html' || getURL == 'contact_list_01.html' || getURL == 'info_hallyo.html' || getURL == 'notice.html') {
         localStorage.removeItem('category');
     }
-    switch(getURL){
+    switch (getURL) {
         case 'home.html':
             document.title = 'Home Page';
-          break;
+            break;
         case 'review_list.html':
             document.title = '리뷰';
-          break;
+            break;
         case 'contact_list_01.html':
             document.title = '문의하기';
-          break;
+            break;
         case 'info_hallyo.html':
-          document.title = 'Info Hallyo';
-          break;
+            document.title = 'Info Hallyo';
+            break;
         case 'notice.html':
             document.title = '리뷰';
-          break;
+            break;
         default:
-          // code block
-      }
-    
+        // code block
+    }
+
     var get = localStorage.getItem("category");
     var get_activeMenu = localStorage.getItem("activeMenu");
     var a = $('.menu .menu_list .menu_item').attr('data-category');
@@ -771,7 +772,7 @@ $(document).ready(function () {
         var active = $(test).parent().addClass("on")
     }
     if (get == undefined || get === "undefined") {
-        
+
     } else {
         if ($('.menu .menu_list').hasClass("on")) {
             $('.menu .menu_list').removeClass("on")
@@ -781,4 +782,27 @@ $(document).ready(function () {
         document.title = get;
     }
 
+});
+function open_modal(data_target) {
+    $('#' + data_target).show(100);
+    $('#' + data_target).addClass('open');
+    $('body').addClass('active_menu');
+    $("body").append("<div class='ovelay_modal fade open' id='ovelay_modal'></div>");
+}
+$(document).on('click', '#send_one_one', function (e) {
+    var data_target = $(this).attr('data-target');
+    open_modal(data_target);
+});
+$(document).on('click', '.btn.close', function (e) {
+    $('.modal').removeClass('open');
+    $('body').removeClass('active_menu');
+    $('.ovelay_modal').remove();
+    setTimeout(function () { $('.modal').css({ 'display': 'none' }); }, 200);
+});
+$(document).on('click', '.box_sum_ques_ans .box_ques', function (e) {
+    $(this).parent().addClass('dropdown');
+});
+$(document).on('click', '.box_sum_ques_ans.dropdown', function (e) {
+    console.log('321');
+    $(this).removeClass('dropdown');
 });
