@@ -23,7 +23,7 @@
     <header class="mb_dev main_headers">
         <div class="global_header">
             <div class="main_logo">
-                <div class="txt_menu" id="title-head">포인트</div>
+                <div class="txt_menu" id="title-head">예약내용 확인</div>
             </div>
             <div class="control_menu_back">
                 <div class="go_back hideText">Go Back</div>
@@ -50,6 +50,45 @@
         </div>
         <div class="mn_body">
             <nav class="main_menu">
+                <!-- <div class="box_select_lang">
+                <select class="control_lang">
+                    <option value="ko"><img src="https://cdn.pixabay.com/photo/2012/04/10/23/04/vietnam-26834_960_720.png
+                            
+                            " />Korea
+                    </option>
+                    <option value="en">English</option>
+                    <option value="vi">Viet Nam</option>
+                    <option value="ja">Japan</option>
+                </select>
+                <span class="bullet_lang"></span>
+            </div> -->
+                <div class="custom_dropbox_lang">
+                    <div class="custom_select">
+                        <div class="custom_select_triggle">
+                            <div id="selected_flag_contry" class="icon_flag kr"></div>
+                            <span class="name_contry">Korea</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom_options">
+                            <div class="custom_option icon_flag selected" data-value="kr">
+                                <div class="icon_flag kr"></div>
+                                <span class="contry_name">Korea</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="cn">
+                                <div class="icon_flag cn"></div>
+                                <span class="contry_name">China</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="vi">
+                                <div class="icon_flag vi"></div>
+                                <span class="contry_name">Viet Nam</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="en">
+                                <div class="icon_flag en"></div>
+                                <span class="contry_name">English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="menu ">
                     <li class="menu_list on"><a href="list_item_category.html" class="menu_item" data-category="KPOP/콘서트" data-active-menu='KPOP/콘서트'>KPOP/콘서트</a></li>
                     <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="공연/뮤지컬" data-active-menu='공연/뮤지컬'>공연/뮤지컬</a></li>
@@ -58,12 +97,20 @@
                     <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="팬미팅/이벤트" data-active-menu='팬미팅/이벤트'>팬미팅/이벤트</a></li>
                 </ul>
                 <ul class="menu">
-                    <li class="menu_list"><a href="contact_list_01.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
+                    <li class="menu_list"><a href="service-center.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
                     </li>
                     <li class="menu_list"><a href="review_list.html" class="menu_item" data-active-menu='랭킹'>랭킹</a></li>
                     <li class="menu_list"><a href="info_hallyo.html" class="menu_item" data-active-menu='한류정'>한류정</a></li>
                     <li class="menu_list"><a href="notice.html" class="menu_item" data-active-menu='공지사'>공지사</a></li>
                 </ul>
+
+                <!-- <ul class="lang">
+                <li class="item_lang">
+                    <label class="control_lang" for="vn">
+                        <input type="radio" class="check_lang" id="vn">
+                    </label>
+                </li>
+            </ul> -->
             </nav>
         </div>
     </aside>
@@ -108,6 +155,7 @@
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
         <section class="payment main_box main_content postter">
             <div class="control_payment">
+                <a href="" class="btn btn01">예매취소요청</a>
                 <a href="" class="btn btn02">문의하기</a>
             </div>
             <div class="title_heading">예약정보</div>
@@ -122,8 +170,13 @@
                         <div class="content">#554</div>
                     </li>
                     <li>
-                        <div class="title">상품 정보</div>
+                        <div class="title">상태</div>
                         <div class="content">New Years Eve Countdown to 2020</div>
+                    </li>
+                    <li>
+                        <div class="title">상품 정보</div>
+                        <div class="content">젊은이의 거리 · 홍대 도보 여행 (트릭 아이 미술관 포함!)<a class="btn_detail" href="">상세정보</a>
+                        </div>
                     </li>
                     <li>
                         <div class="title">옵션</div>
@@ -177,7 +230,7 @@
                     </li>
                     <li>
                         <div class="title">배송주소</div>
-                        <div class="content">280 Xvnt</div>
+                        <div class="content">경기도 부천시 부일로</div>
                     </li>
                 </ul>
             </div>
@@ -224,46 +277,41 @@
                 <div class="form_check">
                     <input type="radio" class="input_action" name="sendmoney" id="send_mony_02">
                     <span class="checkmark_action"></span>
-                    <label class="label_action" for="send_mony_02">계좌입금</label>
-                </div>
-                <div class="form_check">
-                    <input type="radio" class="input_action" name="sendmoney" id="send_mony_03">
-                    <span class="checkmark_action"></span>
-                    <label class="label_action" for="send_mony_03">현지현금지불</label>
+                    <label class="label_action" for="send_mony_02">계좌입금 (한국은행 202-0202-020202)</label>
                 </div>
             </div>
             <div class="title_heading">결제 정보</div>
             <div class="modul06">
                 <div class="control_input">
                     <label class="form_raceheck">
-                        <input class="input_action_o" type="radio" name="check00c" id="check001">
+                        <input class="input_action_o" type="checkbox" name="check00c" id="check001">
                         <span class="checkmark_action_o"></span>
                         <label class="label_action_o" for="check001">개인정보 제3자 제공에 동의합니다
                             <span class="surg_box">?
-                            <span class="tooltiptexxt">
-                                because the tooltip text has a top and bottom padding of 5px. If you
-                                increase
-                                its padding, also increase the value of the top property to ensure that it
-                                stays
-                                in the middle (if this is something you want)
-                            </span>
+                                <span class="tooltiptexxt">
+                                    because the tooltip text has a top and bottom padding of 5px. If you
+                                    increase
+                                    its padding, also increase the value of the top property to ensure that it
+                                    stays
+                                    in the middle (if this is something you want)
+                                </span>
                             </span>
                         </label>
                     </label>
                     <label class="form_raceheck">
-                        <input class="input_action_o" type="radio" name="check00c" id="check002">
+                        <input class="input_action_o" type="checkbox" name="check00b" id="check002">
                         <span class="checkmark_action_o"></span>
                         <label class="label_action_o" for="check002">결제대행서비스 이용약관에 동의합니다.
                             <span class="surg_box">?
-                            <span class="tooltiptexxt">
-                                If you want the tooltip to appear on top or on the bottom, see examples
-                                below.
-                                Note that we use the margin-left property with a value of minus 60 pixels.
-                                This
-                                is to center the tooltip above/below the hoverable text. It is set to the
-                                half
-                                of the tooltip's width
-                            </span>
+                                <span class="tooltiptexxt">
+                                    If you want the tooltip to appear on top or on the bottom, see examples
+                                    below.
+                                    Note that we use the margin-left property with a value of minus 60 pixels.
+                                    This
+                                    is to center the tooltip above/below the hoverable text. It is set to the
+                                    half
+                                    of the tooltip's width
+                                </span>
                             </span>
                         </label>
                     </label>

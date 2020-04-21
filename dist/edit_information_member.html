@@ -50,6 +50,45 @@
         </div>
         <div class="mn_body">
             <nav class="main_menu">
+                <!-- <div class="box_select_lang">
+                <select class="control_lang">
+                    <option value="ko"><img src="https://cdn.pixabay.com/photo/2012/04/10/23/04/vietnam-26834_960_720.png
+                            
+                            " />Korea
+                    </option>
+                    <option value="en">English</option>
+                    <option value="vi">Viet Nam</option>
+                    <option value="ja">Japan</option>
+                </select>
+                <span class="bullet_lang"></span>
+            </div> -->
+                <div class="custom_dropbox_lang">
+                    <div class="custom_select">
+                        <div class="custom_select_triggle">
+                            <div id="selected_flag_contry" class="icon_flag kr"></div>
+                            <span class="name_contry">Korea</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom_options">
+                            <div class="custom_option icon_flag selected" data-value="kr">
+                                <div class="icon_flag kr"></div>
+                                <span class="contry_name">Korea</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="cn">
+                                <div class="icon_flag cn"></div>
+                                <span class="contry_name">China</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="vi">
+                                <div class="icon_flag vi"></div>
+                                <span class="contry_name">Viet Nam</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="en">
+                                <div class="icon_flag en"></div>
+                                <span class="contry_name">English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="menu ">
                     <li class="menu_list on"><a href="list_item_category.html" class="menu_item" data-category="KPOP/콘서트" data-active-menu='KPOP/콘서트'>KPOP/콘서트</a></li>
                     <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="공연/뮤지컬" data-active-menu='공연/뮤지컬'>공연/뮤지컬</a></li>
@@ -58,12 +97,20 @@
                     <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="팬미팅/이벤트" data-active-menu='팬미팅/이벤트'>팬미팅/이벤트</a></li>
                 </ul>
                 <ul class="menu">
-                    <li class="menu_list"><a href="contact_list_01.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
+                    <li class="menu_list"><a href="service-center.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
                     </li>
                     <li class="menu_list"><a href="review_list.html" class="menu_item" data-active-menu='랭킹'>랭킹</a></li>
                     <li class="menu_list"><a href="info_hallyo.html" class="menu_item" data-active-menu='한류정'>한류정</a></li>
                     <li class="menu_list"><a href="notice.html" class="menu_item" data-active-menu='공지사'>공지사</a></li>
                 </ul>
+
+                <!-- <ul class="lang">
+                <li class="item_lang">
+                    <label class="control_lang" for="vn">
+                        <input type="radio" class="check_lang" id="vn">
+                    </label>
+                </li>
+            </ul> -->
             </nav>
         </div>
     </aside>
@@ -107,13 +154,20 @@
     </aside>
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
         <section class="form_sinup edit_infor_member">
-            <div class="label_aw red_cl">는 필수입니다.</div>
-            <div class="group_box on_inline">
-                <label class="label">아이디(이메일)</label>
-                <div class="text_info bold">henrydn205@gmail.com</div>
+            <div class="header_edit_info">
+                <a href="" class="btn btn_cancel_regis">회원탈퇴 요청</a>
+            </div>
+            <!-- <div class="label_aw red_cl">는 필수입니다.</div> -->
+            <div class="group_box ">
+                <label class="label"><span class="red_cl">*</span>이메일</label>
+                <div class="form_row">
+                    <div class="box_form full">
+                        <input type="text" name="" class="control_full" placeholder="">
+                    </div>
+                </div>
             </div>
             <div class="group_box ">
-                <label class="label">비밀번호</label>
+                <label class="label"><span class="red_cl">*</span>비밀번호</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <input type="text" class="control_full" placeholder="">
@@ -125,7 +179,7 @@
                 <div class="validation_form">비밀번호는 영문, 숫자, 특수 문자의 조합으로 8 </div>
             </div>
             <div class="group_box ">
-                <label class="label">비밀번호 확인</label>
+                <label class="label"><span class="red_cl">*</span>비밀번호 확인</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <input type="text" class="control_full" placeholder="">
@@ -133,7 +187,7 @@
                 </div>
             </div>
             <div class="group_box ">
-                <label class="label">이름</label>
+                <label class="label"><span class="red_cl">*</span>이름</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <input type="text" class="control_full" placeholder="">
@@ -149,7 +203,7 @@
                 </div>
             </div>
             <div class="group_box ">
-                <label class="label">휴대폰</label>
+                <label class="label"><span class="red_cl">*</span>휴대폰</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <input type="text" class="control_full" placeholder="">
@@ -158,7 +212,7 @@
             </div>
             <div class="group_box items_boxs">
                 <div class="item_box_group">
-                    <label class="label">국적</label>
+                    <label class="label"><span class="red_cl">*</span>국적</label>
                     <div class="form_row">
                         <div class="box_form full">
                             <select class="control_full">
@@ -171,7 +225,7 @@
                     </div>
                 </div>
                 <div class="item_box_group">
-                    <label class="label">우편번호</label>
+                    <label class="label"><span class="red_cl">*</span>우편번호</label>
                     <div class="form_row">
                         <div class="box_form full">
                             <input type="text" class="control_full" value="+849765332445">
@@ -179,16 +233,8 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="group_box ">
-                <label class="label">우편번호</label>
-                <div class="form_row">
-                    <div class="box_form full">
-                        <input type="text" class="control_full" placeholder="">
-                    </div>
-                </div>
-            </div> -->
             <div class="group_box ">
-                <label class="label">주소</label>
+                <label class="label"><span class="red_cl">*</span>주소</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <input type="text" class="control_full" placeholder="티켓 및 상품 수령 가능한 주소를 정확히 입력해 주세요">
@@ -276,7 +322,7 @@
                 </div> -->
             </div>
             <div class="group_box ">
-                <label class="label">좋아하는 연애인</label>
+                <label class="label">SNS ID</label>
                 <div class="form_row">
                     <div class="box_form w_3">
                         <select class="control_full">
@@ -306,7 +352,7 @@
                 </div>
             </div>
             <div class="form_send">
-                <button class="btn_send">Send</button>
+                <button class="btn_send">저장하기</button>
             </div>
         </section>
     </aside>

@@ -1,4 +1,5 @@
 .btn {
+    text-decoration: none;
     border: none;
     outline: none;
     cursor: pointer;
@@ -74,5 +75,31 @@
         padding: 5px 15px;
         border: 1px solid #3F65AE;
         @include borderRadius(15px);
+    }
+    &.btn_cancel_regis {
+        border: 1px solid #78BCC4;
+        background: #78BCC4;
+        color: #fff;
+
+        @include hofo() {
+            background: #007684;
+            border: 1px solid #007684;
+        }
+    }
+    &.btn01{
+        background: rgb(193, 203, 204);
+        color: #fff;
+        @include hofo() {
+            background: #006571;
+            border: 1px solid #006571;
+        }
+    }
+    &.btn02{
+        background: #E4E4E4;
+        color: #707070;
+        @include hofo() {
+            background: #a2a2a2;
+            border: 1px solid #fff;
+        }
     }
 }

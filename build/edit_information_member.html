@@ -6,13 +6,20 @@
 @@include('../layout/header02.html')
 <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
     <section class="form_sinup edit_infor_member">
-        <div class="label_aw red_cl">는 필수입니다.</div>
-        <div class="group_box on_inline">
-            <label class="label">아이디(이메일)</label>
-            <div class="text_info bold">henrydn205@gmail.com</div>
+        <div class="header_edit_info">
+            <a href="" class="btn btn_cancel_regis">회원탈퇴 요청</a>
+        </div>
+        <!-- <div class="label_aw red_cl">는 필수입니다.</div> -->
+        <div class="group_box ">
+            <label class="label"><span class="red_cl">*</span>이메일</label>
+            <div class="form_row">
+                <div class="box_form full">
+                    <input type="text" name="" class="control_full" placeholder="">
+                </div>
+            </div>
         </div>
         <div class="group_box ">
-            <label class="label">비밀번호</label>
+            <label class="label"><span class="red_cl">*</span>비밀번호</label>
             <div class="form_row">
                 <div class="box_form full">
                     <input type="text" class="control_full" placeholder="">
@@ -24,7 +31,7 @@
             <div class="validation_form">비밀번호는 영문, 숫자, 특수 문자의 조합으로 8 </div>
         </div>
         <div class="group_box ">
-            <label class="label">비밀번호 확인</label>
+            <label class="label"><span class="red_cl">*</span>비밀번호 확인</label>
             <div class="form_row">
                 <div class="box_form full">
                     <input type="text" class="control_full" placeholder="">
@@ -32,7 +39,7 @@
             </div>
         </div>
         <div class="group_box ">
-            <label class="label">이름</label>
+            <label class="label"><span class="red_cl">*</span>이름</label>
             <div class="form_row">
                 <div class="box_form full">
                     <input type="text" class="control_full" placeholder="">
@@ -48,7 +55,7 @@
             </div>
         </div>
         <div class="group_box ">
-            <label class="label">휴대폰</label>
+            <label class="label"><span class="red_cl">*</span>휴대폰</label>
             <div class="form_row">
                 <div class="box_form full">
                     <input type="text" class="control_full" placeholder="">
@@ -57,7 +64,7 @@
         </div>
         <div class="group_box items_boxs">
             <div class="item_box_group">
-                <label class="label">국적</label>
+                <label class="label"><span class="red_cl">*</span>국적</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <select class="control_full">
@@ -70,7 +77,7 @@
                 </div>
             </div>
             <div class="item_box_group">
-                <label class="label">우편번호</label>
+                <label class="label"><span class="red_cl">*</span>우편번호</label>
                 <div class="form_row">
                     <div class="box_form full">
                         <input type="text" class="control_full" value="+849765332445">
@@ -78,16 +85,8 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="group_box ">
-                <label class="label">우편번호</label>
-                <div class="form_row">
-                    <div class="box_form full">
-                        <input type="text" class="control_full" placeholder="">
-                    </div>
-                </div>
-            </div> -->
         <div class="group_box ">
-            <label class="label">주소</label>
+            <label class="label"><span class="red_cl">*</span>주소</label>
             <div class="form_row">
                 <div class="box_form full">
                     <input type="text" class="control_full" placeholder="티켓 및 상품 수령 가능한 주소를 정확히 입력해 주세요">
@@ -175,7 +174,7 @@
                 </div> -->
         </div>
         <div class="group_box ">
-            <label class="label">좋아하는 연애인</label>
+            <label class="label">SNS ID</label>
             <div class="form_row">
                 <div class="box_form w_3">
                     <select class="control_full">
@@ -205,7 +204,7 @@
             </div>
         </div>
         <div class="form_send">
-            <button class="btn_send">Send</button>
+            <button class="btn_send">저장하기</button>
         </div>
     </section>
 </aside>

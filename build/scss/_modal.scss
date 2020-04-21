@@ -173,7 +173,7 @@
 
                 .btn_close {
                     position: absolute;
-                    top:10px;
+                    top: 10px;
                     right: 5px;
                     height: 20px;
                     width: 20px;
@@ -432,6 +432,60 @@
             text-align: center;
             font-size: px2em(16);
             color: #777D84;
+        }
+    }
+}
+
+.modal_alert {
+    .md_body {
+        display: flex;
+        flex-direction: row;
+        min-height: auto;
+        padding: 10px;
+
+        .box_icon {
+            width: 40px;
+
+            &.warning {
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url('../images/svg/alert_warning.svg');
+                    background-position: center;
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    display: block;
+                }
+            }
+
+            &.info {
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url('../images/svg/alert_info.svg');
+                    background-position: center;
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    display: block;
+                }
+            }
+
+            &.question {
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url('../images/svg/alert_question.svg');
+                    background-position: center;
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    display: block;
+                }
+            }
+        }
+
+        .box_content {
+            @include calc(width, '100% - 40px');
+            padding-left: 15px;
         }
     }
 }

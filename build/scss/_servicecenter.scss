@@ -28,3 +28,16 @@
 
     }
 }
+.no_answerQA{
+    margin-top:20px;
+    background-color: #EFEFEF;
+    color: #686868;
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+    .btn{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        @include borderRadius(6px);
+    }
+}

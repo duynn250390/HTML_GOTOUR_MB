@@ -721,7 +721,7 @@
 
         .content {
             padding-right: 1em;
-
+            
             @include maxWidth(375px) {
                 padding-right: 0;
             }
@@ -1584,4 +1584,15 @@ span.label_noti {
     flex-direction: column;
     align-items: flex-end;
     margin-top: 1em;
+}
+.btn_detail{
+    text-decoration: none;
+    outline: none;
+    line-height: 1;
+    color: #707070;
+    font-size: px2em(10);
+    padding:2px 4px;
+    cursor: pointer;
+    border:1px solid #78BCC4;
+    @include borderRadius(6px);
 }

@@ -23,7 +23,7 @@
     <header class="mb_dev main_headers">
         <div class="global_header">
             <div class="main_logo">
-                <div class="txt_menu" id="title-head">1:1 문의하기</div>
+                <div class="txt_menu" id="title-head">고객센터</div>
             </div>
             <div class="control_menu_back">
                 <div class="go_back hideText">Go Back</div>
@@ -50,6 +50,45 @@
         </div>
         <div class="mn_body">
             <nav class="main_menu">
+                <!-- <div class="box_select_lang">
+                <select class="control_lang">
+                    <option value="ko"><img src="https://cdn.pixabay.com/photo/2012/04/10/23/04/vietnam-26834_960_720.png
+                            
+                            " />Korea
+                    </option>
+                    <option value="en">English</option>
+                    <option value="vi">Viet Nam</option>
+                    <option value="ja">Japan</option>
+                </select>
+                <span class="bullet_lang"></span>
+            </div> -->
+                <div class="custom_dropbox_lang">
+                    <div class="custom_select">
+                        <div class="custom_select_triggle">
+                            <div id="selected_flag_contry" class="icon_flag kr"></div>
+                            <span class="name_contry">Korea</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom_options">
+                            <div class="custom_option icon_flag selected" data-value="kr">
+                                <div class="icon_flag kr"></div>
+                                <span class="contry_name">Korea</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="cn">
+                                <div class="icon_flag cn"></div>
+                                <span class="contry_name">China</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="vi">
+                                <div class="icon_flag vi"></div>
+                                <span class="contry_name">Viet Nam</span>
+                            </div>
+                            <div class="custom_option icon_flag " data-value="en">
+                                <div class="icon_flag en"></div>
+                                <span class="contry_name">English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="menu ">
                     <li class="menu_list on"><a href="list_item_category.html" class="menu_item" data-category="KPOP/콘서트" data-active-menu='KPOP/콘서트'>KPOP/콘서트</a></li>
                     <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="공연/뮤지컬" data-active-menu='공연/뮤지컬'>공연/뮤지컬</a></li>
@@ -58,12 +97,20 @@
                     <li class="menu_list"><a href="list_item_category.html" class="menu_item" data-category="팬미팅/이벤트" data-active-menu='팬미팅/이벤트'>팬미팅/이벤트</a></li>
                 </ul>
                 <ul class="menu">
-                    <li class="menu_list"><a href="contact_list_01.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
+                    <li class="menu_list"><a href="service-center.html" class="menu_item" data-active-menu='고객센터'>고객센터</a>
                     </li>
                     <li class="menu_list"><a href="review_list.html" class="menu_item" data-active-menu='랭킹'>랭킹</a></li>
                     <li class="menu_list"><a href="info_hallyo.html" class="menu_item" data-active-menu='한류정'>한류정</a></li>
                     <li class="menu_list"><a href="notice.html" class="menu_item" data-active-menu='공지사'>공지사</a></li>
                 </ul>
+
+                <!-- <ul class="lang">
+                <li class="item_lang">
+                    <label class="control_lang" for="vn">
+                        <input type="radio" class="check_lang" id="vn">
+                    </label>
+                </li>
+            </ul> -->
             </nav>
         </div>
     </aside>
@@ -107,16 +154,18 @@
     </aside>
     <aside class="mb_dev vs_mb content_main_father ed_bar_top" id="content_main_father">
         <div class="main_fqa">
-            <div class="centerService">
-                <div class="item_tabs  tabsA" data-tabs="00001">
-                    <div class="text">문의하기</div>
+            <div class="controlTabs_fqa">
+                <div class="item_tabs  tabsA">
+                    <span class="icon"></span>
+                    <div class="text">FAQ</div>
                 </div>
-                <div class="item_tabs on tabsB" data-tabs="00002">
-                    <div class="text">나의 문의내역</div>
+                <div class="item_tabs tabsB">
+                    <span class="icon"></span>
+                    <a href="chat-one-one.html" class="text">1:1 문의하기</a>
                 </div>
             </div>
             <div class="tabs_control">
-                <div class="tabsintem " id="tabs-00001">
+                <div class="tabsintem on" id="tabs-00001">
                     <section class="listQA_contact">
                         <div class="form_searchQA">
                             <input class="input_search" type="text" placeholder="Search...">
@@ -210,52 +259,35 @@
                         </ul>
                     </section>
                 </div>
-                <div class="tabsintem on" id="tabs-00002">
-                    <div class="box_send_contact">
-                        <div class="form_group inline">
-                            <label>닉네임</label>
-                            <div class="text">박윤종</div>
-                        </div>
-                        <div class="form_group">
-                            <label>이메일</label>
-                            <input class="st_in control_in" type="text" placeholder="email@gmail.com">
-                        </div>
-                        <div class="form_group">
-                            <select class="st_in control_in">
-                                <option>예매/결제</option>
-                            </select>
-                            <span class="drop_down"></span>
-                        </div>
-                        <div class="form_group">
-                            <label>내용</label>
-                            <textarea name="" id="" class="st_in textarea"></textarea>
-                        </div>
-                        <div class="form_group">
-                            <div class="notice">문의하신 내용은 고투어 티켓 웹에서도 확인하실 수 있습니다.
-                                gotourticket.com</div>
-                        </div>
-                        <div class="form_group">
-                            <button type="submit" class="btn " data-open="model" data-target="md_notification" id="send_one_one">문의하기</button>
-                        </div>
+                <!-- <div class="tabsintem on" id="tabs-00002">
+                <div class="box_send_contact">
+                    <div class="form_group inline">
+                        <label>이메일</label>
+                        <div class="text">박윤종</div>
+                    </div>
+                    <div class="form_group">
+                        <label>이메일</label>
+                        <input class="st_in control_in" type="text" placeholder="email@gmail.com">
+                    </div>
+                    <div class="form_group">
+                        <select class="st_in control_in">
+                            <option>예매/결제</option>
+                        </select>
+                        <span class="drop_down"></span>
+                    </div>
+                    <div class="form_group">
+                        <label>내용</label>
+                        <textarea name="" id="" class="st_in textarea"></textarea>
+                    </div>
+                    <div class="form_group">
+                        <div class="notice">문의하신 내용은 고투어 티켓 웹에서도 확인하실 수 있습니다.
+                            gotourticket.com</div>
+                    </div>
+                    <div class="form_group">
+                        <button type="submit" class="btn">문의하기</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </aside>
-
-    <aside class="modal fade md_notifacion" id="md_notification" tabindex="-1">
-        <div class="modal_dialog modal_center">
-            <div class="modal_content" id="modal_content">
-                <div class="md_head center">
-                    <h5 class="modal_title">고객센터</h5>
-                    <button class="btn_close btn " dismiss="modal"></button>
-                </div>
-                <div class="md_body">
-                    <div class="content">연락처를 입력해주세요.</div>
-                </div>
-                <div class="md_footer">
-                    <button type="button" class="btn btn_action">확인</button>
-                </div>
+            </div> -->
             </div>
         </div>
     </aside>

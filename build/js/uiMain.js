@@ -5,10 +5,16 @@ $(document).ready(function () {
     slide_main(widthScreen);
     $(document).on('click', '.tabs_item_detail', function () {
         var data_tabs = $(this).attr('data-tabs');
+        console.log(data_tabs);
+        
         $('.tabs_item_detail').removeClass('active');
         $(this).addClass('active');
         $('.post_list___tabs').removeClass('active');
         $('#active_tabs__' + data_tabs).addClass('active');
+    });
+    $(document).on('click', '.dox_fillter ul li', function () {
+        $('.dox_fillter ul li').removeClass('on');
+        $(this).addClass('on');
     });
     $(document).on('click', '.show_comment', function () {
         $('.list_comment_qa').css({
